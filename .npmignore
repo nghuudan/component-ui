@@ -1,0 +1,7 @@
+coverage/
+src/
+.babelrc
+.eslintrc*
+/app.*
+/jest.*
+/webpack.*

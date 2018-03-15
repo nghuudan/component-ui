@@ -1,0 +1,27 @@
+@import './src/index';
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  .hd-flex {
+    background-color: #999;
+    border: 2px solid #666;
+    padding: 12px;
+  }
+  .hd-grid {
+    background-color: #eee;
+    border: 2px solid #ccc;
+    padding: 12px;
+  }
+}

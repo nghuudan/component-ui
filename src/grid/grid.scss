@@ -1,0 +1,86 @@
+@import '../vars';
+
+.hd-grid {
+  align-items: stretch;
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow: hidden;
+
+  &.hd-container {
+    @for $i from 1 through 12 {
+      > .hd-xs-#{$i} {
+        flex-basis: (100% / 12 * $i);
+      }
+      > .hd-sm-#{$i},
+      > .hd-md-#{$i},
+      > .hd-lg-#{$i},
+      > .hd-xl-#{$i} {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $hd-media-sm-width) {
+  .hd-grid {
+    &.hd-container {
+      @for $i from 1 through 12 {
+        > .hd-sm-#{$i} {
+          flex-basis: (100% / 12 * $i);
+        }
+        > .hd-md-#{$i},
+        > .hd-lg-#{$i},
+        > .hd-xl-#{$i} {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $hd-media-md-width) {
+  .hd-grid {
+    &.hd-container {
+      @for $i from 1 through 12 {
+        > .hd-md-#{$i} {
+          flex-basis: (100% / 12 * $i);
+        }
+        > .hd-lg-#{$i},
+        > .hd-xl-#{$i} {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $hd-media-lg-width) {
+  .hd-grid {
+    &.hd-container {
+      @for $i from 1 through 12 {
+        > .hd-lg-#{$i} {
+          flex-basis: (100% / 12 * $i);
+        }
+        > .hd-xl-#{$i} {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $hd-media-xl-width) {
+  .hd-grid {
+    &.hd-container {
+      @for $i from 1 through 12 {
+        > .hd-xl-#{$i} {
+          flex-basis: (100% / 12 * $i);
+        }
+      }
+    }
+  }
+}

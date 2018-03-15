@@ -1,0 +1,45 @@
+.hd-flex {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow: hidden;
+
+  @import './align';
+
+  &.hd-column {
+    flex-direction: column;
+  }
+
+  &.hd-row {
+    flex-direction: row;
+  }
+
+  @for $i from 1 through 20 {
+    &.hd-basis-#{$i * 5} {
+      flex-basis: 1% * ($i * 5);
+    }
+  }
+
+  &.hd-basis-33 {
+    flex-basis: (100% / 3);
+  }
+
+  &.hd-basis-66 {
+    flex-basis: (100% / 3 * 2);
+  }
+
+  &.hd-grow {
+    flex-grow: 1;
+  }
+
+  &.hd-overflow {
+    overflow: auto;
+  }
+
+  &.hd-shrink {
+    flex-shrink: 1;
+  }
+}
