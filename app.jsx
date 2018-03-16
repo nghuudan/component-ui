@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Flex, Grid } from './src';
+import { Button, Flex, Grid } from './src';
 import './app.scss';
 
 const App = () => (
@@ -15,6 +15,10 @@ const App = () => (
     </Grid>
     <Grid sm={6}>
       <h2>Grid</h2>
+      <Button primary>primary</Button>
+      <Button warning>warning</Button>
+      <Button>button</Button>
+      <Button disabled>disabled</Button>
     </Grid>
     <Grid sm={6}>
       <h2>Grid</h2>
