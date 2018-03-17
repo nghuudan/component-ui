@@ -8,6 +8,12 @@ describe('Grid', () => {
   const wrapper = shallow((
     <Grid
       className="test-class"
+      hidden
+      hideXs
+      hideSm
+      hideMd
+      hideLg
+      hideXl
       xs={5}
       sm={6}
       md={7}
@@ -44,5 +50,29 @@ describe('Grid', () => {
 
   it('should have the className according to xl from props', () => {
     expect(wrapper.find('.hd-xl-9')).toHaveLength(1);
+  });
+
+  it('should have the className according to hidden from props', () => {
+    expect(wrapper.find('.hd-hidden')).toHaveLength(1);
+  });
+
+  it('should have the className according to hideXs from props', () => {
+    expect(wrapper.find('.hd-hide-xs')).toHaveLength(1);
+  });
+
+  it('should have the className according to hideSm from props', () => {
+    expect(wrapper.find('.hd-hide-sm')).toHaveLength(1);
+  });
+
+  it('should have the className according to hideMd from props', () => {
+    expect(wrapper.find('.hd-hide-md')).toHaveLength(1);
+  });
+
+  it('should have the className according to hideLg from props', () => {
+    expect(wrapper.find('.hd-hide-lg')).toHaveLength(1);
+  });
+
+  it('should have the className according to hideXl from props', () => {
+    expect(wrapper.find('.hd-hide-xl')).toHaveLength(1);
   });
 });

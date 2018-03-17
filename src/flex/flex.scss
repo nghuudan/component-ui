@@ -1,3 +1,5 @@
+@import '../vars';
+
 .hd-flex {
   align-items: flex-start;
   box-sizing: border-box;
@@ -41,5 +43,49 @@
 
   &.hd-shrink {
     flex-shrink: 1;
+  }
+
+  &.hd-hidden {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $hd-media-xs-width) {
+  .hd-flex {
+    &.hd-hide-xs {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $hd-media-sm-width) {
+  .hd-flex {
+    &.hd-hide-sm {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $hd-media-md-width) {
+  .hd-flex {
+    &.hd-hide-md {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $hd-media-lg-width) {
+  .hd-flex {
+    &.hd-hide-lg {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $hd-media-xl-width) {
+  .hd-flex {
+    &.hd-hide-xl {
+      display: none;
+    }
   }
 }

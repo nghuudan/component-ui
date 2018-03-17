@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Flex = ({
-  align, basis, children, className,
-  grow, layout, overflow, shrink,
+  align, basis, children,
+  className, grow, hidden,
+  hideXs, hideSm, hideMd,
+  hideLg, hideXl, layout,
+  overflow, shrink,
 }) => (
   <div className={
     classNames({
@@ -15,6 +18,12 @@ const Flex = ({
       'hd-column': layout === 'column',
       'hd-row': layout === 'row',
       'hd-grow': grow,
+      'hd-hidden': hidden,
+      'hd-hide-xs': hideXs,
+      'hd-hide-sm': hideSm,
+      'hd-hide-md': hideMd,
+      'hd-hide-lg': hideLg,
+      'hd-hide-xl': hideXl,
       'hd-overflow': overflow,
       'hd-shrink': shrink,
     })
@@ -30,6 +39,12 @@ Flex.defaultProps = {
   children: null,
   className: '',
   grow: false,
+  hidden: false,
+  hideXs: false,
+  hideSm: false,
+  hideMd: false,
+  hideLg: false,
+  hideXl: false,
   layout: 'row',
   overflow: false,
   shrink: false,
@@ -41,6 +56,12 @@ Flex.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   grow: PropTypes.bool,
+  hidden: PropTypes.bool,
+  hideXs: PropTypes.bool,
+  hideSm: PropTypes.bool,
+  hideMd: PropTypes.bool,
+  hideLg: PropTypes.bool,
+  hideXl: PropTypes.bool,
   layout: PropTypes.oneOf(['column', 'row']),
   overflow: PropTypes.bool,
   shrink: PropTypes.bool,

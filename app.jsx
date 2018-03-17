@@ -4,7 +4,7 @@ import { Button, Flex, Grid } from './src';
 import './app.scss';
 
 const App = () => (
-  <Grid className="app-container" container>
+  <Grid className="app-container" container hideMd>
     <Grid md={12}>
       <h1>Component UI - Simple components for React</h1>
     </Grid>
@@ -35,7 +35,7 @@ const App = () => (
         </Flex>
       </Grid>
       <Grid md={3}>
-        <Flex align="start-around" layout="row">
+        <Flex align="start-around" hideSm layout="row">
           <h3>start-around</h3>
           <h3>start-around</h3>
         </Flex>

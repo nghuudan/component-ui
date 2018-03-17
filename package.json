@@ -1,11 +1,12 @@
 {
   "name": "component-ui",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Simple components for React",
   "main": "dist/index.js",
   "scripts": {
     "babel": "babel src --ignore spec.js --out-dir dist",
-    "build": "rimraf dist && npm run lint && npm run babel && npm run sass",
+    "build": "rimraf coverage dist && npm run lint && npm run babel && npm run sass",
+    "dist": "npm test && npm run build",
     "lint": "eslint --ext js --ext jsx src",
     "lint:fix": "eslint --ext js --ext jsx --fix src",
     "sass": "node-sass -r src -o dist --output-style compressed",
