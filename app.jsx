@@ -1,47 +1,51 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Flex, Grid } from './src';
+import { Button, Flex, Grid } from './src';
 import './app.scss';
 
 const App = () => (
   <Grid className="app-container" container>
-    <Grid container sm={12}>
-      <Grid md={6}>
-        <h1>Component UI - Simple components for React</h1>
+    <Grid md={12}>
+      <h1>Component UI - Simple components for React</h1>
+    </Grid>
+    <Grid md={12}>
+      <h2>Button</h2>
+      <Button primary>Primary</Button>
+      <Button warning>Warning</Button>
+      <Button>Default</Button>
+      <Button disabled>Disabled</Button>
+    </Grid>
+    <Grid container md={12}>
+      <Grid md={12}>
+        <h2>Flex</h2>
       </Grid>
-      <Grid md={6}>
-        <h1>Grid</h1>
+      <Grid md={2}>
+        <Flex align="start" layout="row">
+          <h3>start</h3>
+        </Flex>
       </Grid>
-    </Grid>
-    <Grid sm={6}>
-      <h2>Grid</h2>
-    </Grid>
-    <Grid sm={6}>
-      <h2>Grid</h2>
-    </Grid>
-    <Grid sm={4}>
-      <h2>Grid</h2>
-    </Grid>
-    <Grid sm={8}>
-      <Flex align="stretch-start" grow layout="column" shrink>
-        <Flex align="start">
-          <h3>Flex</h3>
+      <Grid md={2}>
+        <Flex align="start-center" layout="row">
+          <h3>start-center</h3>
         </Flex>
-        <Flex align="center">
-          <h3>Flex</h3>
+      </Grid>
+      <Grid md={2}>
+        <Flex align="start-end" layout="row">
+          <h3>start-end</h3>
         </Flex>
-        <Flex align="end">
-          <h3>Flex</h3>
+      </Grid>
+      <Grid md={3}>
+        <Flex align="start-around" layout="row">
+          <h3>start-around</h3>
+          <h3>start-around</h3>
         </Flex>
-        <Flex>
-          <Flex basis={50}>
-            <h4>Flex</h4>
-          </Flex>
-          <Flex basis={50}>
-            <h4>Flex</h4>
-          </Flex>
+      </Grid>
+      <Grid md={3}>
+        <Flex align="start-between" layout="row">
+          <h3>start-between</h3>
+          <h3>start-between</h3>
         </Flex>
-      </Flex>
+      </Grid>
     </Grid>
   </Grid>
 );

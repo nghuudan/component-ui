@@ -1,0 +1,63 @@
+@import '../vars';
+
+.hd-button {
+  background-color: $hd-button-bg-color;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0.1em 0.2em 0.1em rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  color: $hd-button-font-color;
+  display: inline-block;
+  font-family: $hd-button-font-family;
+  font-size: $hd-button-font-size;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin: 0.2em;
+  outline: 0;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  transition: outline 0.2s;
+
+  &:not(.hd-disabled) {
+    &:hover {
+      background-color: $hd-button-hover-bg-color;
+    }
+
+    &:active {
+      background-color: $hd-button-active-bg-color;
+    }
+  }
+
+  &.hd-disabled {
+    color: $hd-button-disabled-font-color;
+    opacity: 0.3;
+  }
+
+  &.hd-primary {
+    background-color: $hd-button-primary-bg-color;
+
+    &:not(.hd-disabled) {
+      &:hover {
+        background-color: $hd-button-primary-hover-bg-color;
+      }
+
+      &:active {
+        background-color: $hd-button-primary-active-bg-color;
+      }
+    }
+  }
+
+  &.hd-warning {
+    background-color: $hd-button-warning-bg-color;
+
+    &:not(.hd-disabled) {
+      &:hover {
+        background-color: $hd-button-warning-hover-bg-color;
+      }
+
+      &:active {
+        background-color: $hd-button-warning-active-bg-color;
+      }
+    }
+  }
+}
