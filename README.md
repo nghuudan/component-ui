@@ -51,6 +51,11 @@ const ButtonExamples = (props) => (
 | `className` | `string`   | CSS class passed into the button element
 | `grow`      | `boolean`  | Fills the space available in the parent
 | `hidden`    | `boolean`  | Hides the component (display: none)
+| `hideXs`    | `boolean`  | Hidden for Extra Small screens and up
+| `hideSm`    | `boolean`  | Hidden for Small screens and up
+| `hideMd`    | `boolean`  | Hidden for Medium screens and up
+| `hideLg`    | `boolean`  | Hidden for Large screens and up
+| `hideXl`    | `boolean`  | Hidden for Extra Large screens and up
 | `layout`    | `string`   | Direction to layout the children within
 | `overflow`  | `boolean`  | Allows scrolling of overflowing content
 | `shrink`    | `boolean`  | Shrinks to allow siblings to fit parent
@@ -71,7 +76,7 @@ const FlexExamples = () => (
     <Flex align="stretch-start" basis={50} layout="column">
       <p>Content</p>
     </Flex>
-    <Flex align="center-end" grow layout="column">
+    <Flex align="center-end" grow hideLg layout="column">
       <p>Content</p>
     </Flex>
     <Flex align="center-start" layout="column" overflow shrink>
@@ -90,6 +95,11 @@ const FlexExamples = () => (
 | `className` | `string`   | CSS class passed into the button element
 | `container` | `boolean`  | Becomes a container for Grid components
 | `hidden`    | `boolean`  | Hides the component (display: none)
+| `hideXs`    | `boolean`  | Hidden for Extra Small screens and up
+| `hideSm`    | `boolean`  | Hidden for Small screens and up
+| `hideMd`    | `boolean`  | Hidden for Medium screens and up
+| `hideLg`    | `boolean`  | Hidden for Large screens and up
+| `hideXl`    | `boolean`  | Hidden for Extra Large screens and up
 | `xs`        | `number`   | Grid size (1-12) for Extra Small screens
 | `sm`        | `number`   | Grid size (1-12) for Small screens
 | `md`        | `number`   | Grid size (1-12) for Medium screens
@@ -104,7 +114,7 @@ const GridExamples = () => (
     <Grid xs={12} sm={6} md={4}>
       <p>Content</p>
     </Grid>
-    <Grid xs={12} sm={6} md={4}>
+    <Grid hideMd xs={12} sm={6} md={4}>
       <p>Content</p>
     </Grid>
     <Grid hidden xs={12} sm={6} md={4}>
