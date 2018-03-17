@@ -30,8 +30,8 @@ Button.defaultProps = {
   click: null,
   disabled: false,
   primary: false,
-  warning: false,
   submit: false,
+  warning: false,
 };
 
 Button.propTypes = {
@@ -40,8 +40,8 @@ Button.propTypes = {
   click: PropTypes.func,
   disabled: PropTypes.bool,
   primary: PropTypes.bool,
-  warning: PropTypes.bool,
   submit: PropTypes.bool,
+  warning: PropTypes.bool,
 };
 
 export default Button;
