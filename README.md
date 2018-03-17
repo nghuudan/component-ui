@@ -4,6 +4,18 @@ Simple components for React
 ## Install with NPM
 `npm install --save component-ui`
 
+## Import or include the CSS
+
+### CSS
+```css
+@import '/your/path/to/component-ui/dist/index.css';
+```
+
+### HTML
+```html
+<link rel="stylesheet" href="/your/path/to/component-ui/dist/index.css">
+```
+
 ## Components
 
 ### Button
