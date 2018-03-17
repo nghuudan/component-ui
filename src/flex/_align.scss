@@ -13,85 +13,70 @@ $justify-list: center flex-end flex-start space-around space-between;
         &.hd-align-start {
           @include hd-align($align, $justify);
         }
-      }
-      @else if $align == flex-end {
+      } @else if $align == flex-end {
         &.hd-align-end {
           @include hd-align($align, $justify);
         }
-      }
-      @else {
+      } @else {
         &.hd-align-#{$align} {
           @include hd-align($align, $justify);
         }
       }
-    }
-    @else {
+    } @else {
       @if $align == flex-start {
         @if $justify == flex-end {
           &.hd-align-start-end {
             @include hd-align($align, $justify);
           }
-        }
-        @else if $justify == space-around {
+        } @else if $justify == space-around {
           &.hd-align-start-around {
             @include hd-align($align, $justify);
           }
-        }
-        @else if $justify == space-between {
+        } @else if $justify == space-between {
           &.hd-align-start-between {
             @include hd-align($align, $justify);
           }
-        }
-        @else {
+        } @else {
           &.hd-align-start-#{$justify} {
             @include hd-align($align, $justify);
           }
         }
-      }
-      @else if $align == flex-end {
+      } @else if $align == flex-end {
         @if $justify == flex-start {
           &.hd-align-end-start {
             @include hd-align($align, $justify);
           }
-        }
-        @else if $justify == space-around {
+        } @else if $justify == space-around {
           &.hd-align-end-around {
             @include hd-align($align, $justify);
           }
-        }
-        @else if $justify == space-between {
+        } @else if $justify == space-between {
           &.hd-align-end-between {
             @include hd-align($align, $justify);
           }
-        }
-        @else {
+        } @else {
           &.hd-align-end-#{$justify} {
             @include hd-align($align, $justify);
           }
         }
-      }
-      @else {
+      } @else {
         @if $justify == flex-start {
           &.hd-align-#{$align}-start {
             @include hd-align($align, $justify);
           }
-        }
-        @else if $justify == flex-end {
+        } @else if $justify == flex-end {
           &.hd-align-#{$align}-end {
             @include hd-align($align, $justify);
           }
-        }
-        @else if $justify == space-around {
+        } @else if $justify == space-around {
           &.hd-align-#{$align}-around {
             @include hd-align($align, $justify);
           }
-        }
-        @else if $justify == space-between {
+        } @else if $justify == space-between {
           &.hd-align-#{$align}-between {
             @include hd-align($align, $justify);
           }
-        }
-        @else {
+        } @else {
           &.hd-align-#{$align}-#{$justify} {
             @include hd-align($align, $justify);
           }
