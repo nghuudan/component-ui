@@ -24,6 +24,10 @@
       }
     }
   }
+
+  &.hd-hidden {
+    display: none;
+  }
 }
 
 @media screen and (min-width: $hd-media-sm-width) {

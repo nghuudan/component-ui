@@ -13,6 +13,7 @@ describe('Flex', () => {
       layout="column"
       overflow
       shrink
+      hidden
     >
       <Child />
     </Flex>
@@ -44,5 +45,9 @@ describe('Flex', () => {
 
   it('should have the className according to shrink from props', () => {
     expect(wrapper.find('.hd-shrink')).toHaveLength(1);
+  });
+
+  it('should have the className according to hidden from props', () => {
+    expect(wrapper.find('.hd-hidden')).toHaveLength(1);
   });
 });

@@ -4,14 +4,15 @@ import classNames from 'classnames';
 
 const Grid = ({
   children, className,
-  container, xs, sm,
-  md, lg, xl,
+  container, hidden,
+  xs, sm, md, lg, xl,
 }) => (
   <div className={
     classNames({
       'hd-grid': true,
       [className]: className,
       'hd-container': container,
+      'hd-hidden': hidden,
       [`hd-xs-${xs}`]: xs,
       [`hd-sm-${sm}`]: sm,
       [`hd-md-${md}`]: md,
@@ -28,6 +29,7 @@ Grid.defaultProps = {
   children: null,
   className: '',
   container: false,
+  hidden: false,
   xs: 0,
   sm: 0,
   md: 0,
@@ -39,6 +41,7 @@ Grid.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   container: PropTypes.bool,
+  hidden: PropTypes.bool,
   xs: PropTypes.number,
   sm: PropTypes.number,
   md: PropTypes.number,

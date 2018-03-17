@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const Flex = ({
   align, basis, children, className,
-  grow, layout, overflow, shrink,
+  grow, hidden, layout, overflow, shrink,
 }) => (
   <div className={
     classNames({
@@ -15,6 +15,7 @@ const Flex = ({
       'hd-column': layout === 'column',
       'hd-row': layout === 'row',
       'hd-grow': grow,
+      'hd-hidden': hidden,
       'hd-overflow': overflow,
       'hd-shrink': shrink,
     })
@@ -30,6 +31,7 @@ Flex.defaultProps = {
   children: null,
   className: '',
   grow: false,
+  hidden: false,
   layout: 'row',
   overflow: false,
   shrink: false,
@@ -41,6 +43,7 @@ Flex.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   grow: PropTypes.bool,
+  hidden: PropTypes.bool,
   layout: PropTypes.oneOf(['column', 'row']),
   overflow: PropTypes.bool,
   shrink: PropTypes.bool,

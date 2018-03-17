@@ -50,6 +50,7 @@ const ButtonExamples = (props) => (
 | `basis`     | `number`   | Percent of the parent Flex used for size
 | `className` | `string`   | CSS class passed into the button element
 | `grow`      | `boolean`  | Fills the space available in the parent
+| `hidden`    | `boolean`  | Hides the component (display: none)
 | `layout`    | `string`   | Direction to layout the children within
 | `overflow`  | `boolean`  | Allows scrolling of overflowing content
 | `shrink`    | `boolean`  | Shrinks to allow siblings to fit parent
@@ -76,6 +77,9 @@ const FlexExamples = () => (
     <Flex align="center-start" layout="column" overflow shrink>
       <p>Content</p>
     </Flex>
+    <Flex align="end" hidden layout="column" overflow shrink>
+      <p>Content</p>
+    </Flex>
   </Flex>
 );
 ```
@@ -85,6 +89,7 @@ const FlexExamples = () => (
 | ----------- | ---------- | ----------------------------------------
 | `className` | `string`   | CSS class passed into the button element
 | `container` | `boolean`  | Becomes a container for Grid components
+| `hidden`    | `boolean`  | Hides the component (display: none)
 | `xs`        | `number`   | Grid size (1-12) for Extra Small screens
 | `sm`        | `number`   | Grid size (1-12) for Small screens
 | `md`        | `number`   | Grid size (1-12) for Medium screens
@@ -102,7 +107,7 @@ const GridExamples = () => (
     <Grid xs={12} sm={6} md={4}>
       <p>Content</p>
     </Grid>
-    <Grid xs={12} sm={6} md={4}>
+    <Grid hidden xs={12} sm={6} md={4}>
       <p>Content</p>
     </Grid>
   </Grid>

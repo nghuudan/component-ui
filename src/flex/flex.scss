@@ -42,4 +42,8 @@
   &.hd-shrink {
     flex-shrink: 1;
   }
+
+  &.hd-hidden {
+    display: none;
+  }
 }
