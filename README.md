@@ -15,7 +15,7 @@ Simple components for React
 | `primary`   | `boolean`  | Applies primary styles to the button
 | `submit`    | `boolean`  | Button will submit when placed in forms
 | `warning`   | `boolean`  | Applies warning styles to the button
-```
+```javascript
 import React from 'react';
 import { Button } from 'component-ui';
 
@@ -41,7 +41,7 @@ const ButtonExamples = (props) => (
 | `layout`    | `string`   | Direction to layout the children within
 | `overflow`  | `boolean`  | Allows scrolling of overflowing content
 | `shrink`    | `boolean`  | Shrinks to allow siblings to fit parent
-```
+```javascript
 import React from 'react';
 import { Flex } from 'component-ui';
 
@@ -78,7 +78,7 @@ const FlexExamples = () => (
 | `md`        | `number`   | Grid size (1-12) for Medium screens
 | `lg`        | `number`   | Grid size (1-12) for Large screens
 | `xl`        | `number`   | Grid size (1-12) for Extra Large screens
-```
+```javascript
 import React from 'react';
 import { Grid } from 'component-ui';
 
