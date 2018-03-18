@@ -1,0 +1,39 @@
+@import './components/index';
+
+$app-body-bg-color: #fff;
+$app-body-font-color: #333;
+$app-title-border-color: #ccc;
+$app-container-box-shadow-color: rgba(0, 0, 0, .3);
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $app-body-bg-color;
+  color: $app-body-font-color;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10pt;
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  border-radius: .1em;
+  box-shadow: 0 .3em .5em .1em $app-container-box-shadow-color;
+  padding: 1em;
+
+  .app-title {
+    border-bottom: 1px solid $app-title-border-color;
+    font-size: 2em;
+    font-weight: 300;
+    margin: 1em 0;
+    padding-bottom: .2em;
+  }
+
+  .app-heading {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 1em 0;
+  }
+}
