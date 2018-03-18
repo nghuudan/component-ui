@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Button, Grid, Flex } from './components';
+import { Button } from './components/button'; // import single component
+import { Flex, Grid } from './components'; // import from all components
 import './app.scss';
 
 const App = () => (
