@@ -1,5 +1,5 @@
 # component-ui
-Simple components for React
+Simple components for React. Bring your own CSS reset.
 
 ## Install with NPM
 `npm install --save component-ui`
@@ -21,12 +21,12 @@ Simple components for React
 ### Button
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
-| `className` | `string`   | CSS class passed into the button element
-| `click`     | `function` | Click event handler passed to the button
-| `disabled`  | `boolean`  | Disables the button
-| `primary`   | `boolean`  | Applies primary styles to the button
-| `submit`    | `boolean`  | Button will submit when placed in forms
-| `warning`   | `boolean`  | Applies warning styles to the button
+| `className` | `String`   | CSS class passed into the button element
+| `click`     | `Function` | Click event handler passed to the button
+| `disabled`  | `Boolean`  | Disables the button
+| `primary`   | `Boolean`  | Applies primary styles to the button
+| `submit`    | `Boolean`  | Button will submit when placed in forms
+| `warning`   | `Boolean`  | Applies warning styles to the button
 ```javascript
 import React from 'react';
 import { Button } from 'component-ui';
@@ -46,19 +46,19 @@ const ButtonExamples = (props) => (
 ### Flex
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
-| `align`     | `string`   | Aligns the children within the component
-| `basis`     | `number`   | Percent of the parent Flex used for size
-| `className` | `string`   | CSS class passed into the button element
-| `grow`      | `boolean`  | Fills the space available in the parent
-| `hidden`    | `boolean`  | Hides the component (display: none)
-| `hideXs`    | `boolean`  | Hidden for Extra Small screens and up
-| `hideSm`    | `boolean`  | Hidden for Small screens and up
-| `hideMd`    | `boolean`  | Hidden for Medium screens and up
-| `hideLg`    | `boolean`  | Hidden for Large screens and up
-| `hideXl`    | `boolean`  | Hidden for Extra Large screens and up
-| `layout`    | `string`   | Direction to layout the children within
-| `overflow`  | `boolean`  | Allows scrolling of overflowing content
-| `shrink`    | `boolean`  | Shrinks to allow siblings to fit parent
+| `align`     | `String`   | Aligns the children within the component
+| `basis`     | `Number`   | Percent of the parent Flex used for size
+| `className` | `String`   | CSS class passed into the button element
+| `grow`      | `Boolean`  | Fills the space available in the parent
+| `hidden`    | `Boolean`  | Hides the component (display: none)
+| `hideXs`    | `Boolean`  | Hidden for Extra Small screens and up
+| `hideSm`    | `Boolean`  | Hidden for Small screens and up
+| `hideMd`    | `Boolean`  | Hidden for Medium screens and up
+| `hideLg`    | `Boolean`  | Hidden for Large screens and up
+| `hideXl`    | `Boolean`  | Hidden for Extra Large screens and up
+| `layout`    | `String`   | Direction to layout the children within
+| `overflow`  | `Boolean`  | Allows scrolling of overflowing content
+| `shrink`    | `Boolean`  | Shrinks to allow siblings to fit parent
 ```javascript
 import React from 'react';
 import { Flex } from 'component-ui';
@@ -92,19 +92,19 @@ const FlexExamples = () => (
 ### Grid
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
-| `className` | `string`   | CSS class passed into the button element
-| `container` | `boolean`  | Becomes a container for Grid components
-| `hidden`    | `boolean`  | Hides the component (display: none)
-| `hideXs`    | `boolean`  | Hidden for Extra Small screens and up
-| `hideSm`    | `boolean`  | Hidden for Small screens and up
-| `hideMd`    | `boolean`  | Hidden for Medium screens and up
-| `hideLg`    | `boolean`  | Hidden for Large screens and up
-| `hideXl`    | `boolean`  | Hidden for Extra Large screens and up
-| `xs`        | `number`   | Grid size (1-12) for Extra Small screens
-| `sm`        | `number`   | Grid size (1-12) for Small screens
-| `md`        | `number`   | Grid size (1-12) for Medium screens
-| `lg`        | `number`   | Grid size (1-12) for Large screens
-| `xl`        | `number`   | Grid size (1-12) for Extra Large screens
+| `className` | `String`   | CSS class passed into the button element
+| `container` | `Boolean`  | Becomes a container for Grid components
+| `hidden`    | `Boolean`  | Hides the component (display: none)
+| `hideXs`    | `Boolean`  | Hidden for Extra Small screens and up
+| `hideSm`    | `Boolean`  | Hidden for Small screens and up
+| `hideMd`    | `Boolean`  | Hidden for Medium screens and up
+| `hideLg`    | `Boolean`  | Hidden for Large screens and up
+| `hideXl`    | `Boolean`  | Hidden for Extra Large screens and up
+| `xs`        | `Number`   | Grid size (1-12) for Extra Small screens
+| `sm`        | `Number`   | Grid size (1-12) for Small screens
+| `md`        | `Number`   | Grid size (1-12) for Medium screens
+| `lg`        | `Number`   | Grid size (1-12) for Large screens
+| `xl`        | `Number`   | Grid size (1-12) for Extra Large screens
 ```javascript
 import React from 'react';
 import { Grid } from 'component-ui';
@@ -121,5 +121,49 @@ const GridExamples = () => (
       <p>Content</p>
     </Grid>
   </Grid>
+);
+```
+
+### Utils
+
+#### Each
+| Property    | Type        | Description
+| ----------- | ----------- | ---------------------------------------
+| `items`     | `Array`     | Array of objects to map to components
+| `component` | `Component` | Component to render for each item
+```javascript
+import React from 'react';
+import { Each } from 'component-ui';
+
+const items = [
+  {
+    name: 'Pasta'
+  },
+  {
+    name: 'Pizza'
+  }
+];
+
+const Item = (props) => <li>{props.name}</li>;
+
+const EachExample = () => (
+  <ul>
+    <Each items={items} component={Item} />
+  </ul>
+);
+```
+
+#### When
+| Property    | Type        | Description
+| ----------- | ----------- | ---------------------------------------
+| `is`        | `Boolean`   | Renders the children if value is truthy
+```javascript
+import React from 'react';
+import { When } from 'component-ui';
+
+const WhenExample = (props) => (
+  <When is={props.isExampleReady}>
+    <p>Content is rendered</p>
+  </When>
 );
 ```
