@@ -9,6 +9,7 @@ describe('Grid', () => {
     <Grid
       className="test-class"
       hidden
+      hide="gt-md"
       hideXs
       hideSm
       hideMd
@@ -54,6 +55,10 @@ describe('Grid', () => {
 
   it('should have the className according to hidden from props', () => {
     expect(wrapper.find('.hd-hidden')).toHaveLength(1);
+  });
+
+  it('should have the className according to hide from props', () => {
+    expect(wrapper.find('.hd-hide-gt-md')).toHaveLength(1);
   });
 
   it('should have the className according to hideXs from props', () => {

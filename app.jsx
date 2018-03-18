@@ -11,7 +11,7 @@ Color.propTypes = { color: PropTypes.string };
 
 const App = () => (
   <Grid className="app-container" container>
-    <Grid md={12}>
+    <Grid hide="lt-md" md={12}>
       <h1>Component UI - Simple components for React</h1>
       <When is={/test/.test('test')}>
         <p>Show this when test is true</p>
@@ -32,7 +32,7 @@ const App = () => (
         <h2>Flex</h2>
       </Grid>
       <Grid md={2}>
-        <Flex align="start" layout="row">
+        <Flex align="start" hide="gt-lg" layout="row">
           <h3>start</h3>
         </Flex>
       </Grid>
