@@ -1,0 +1,29 @@
+@import './vars';
+
+@mixin hd-media-hide($name, $size, $media-width, $media-width-next) {
+  @if $media-width-next > $media-width {
+    @media screen and (min-width: $media-width) and (max-width: $media-width-next - 1) {
+      .hd-#{$name} {
+        &.hd-hide-#{$size} {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $media-width) {
+    .hd-#{$name} {
+      &.hd-hide-gt-#{$size} {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $media-width - 1) {
+    .hd-#{$name} {
+      &.hd-hide-lt-#{$size} {
+        display: none;
+      }
+    }
+  }
+}

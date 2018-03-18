@@ -14,6 +14,7 @@ describe('Flex', () => {
       overflow
       shrink
       hidden
+      hide="gt-md"
       hideXs
       hideSm
       hideMd
@@ -54,6 +55,10 @@ describe('Flex', () => {
 
   it('should have the className according to hidden from props', () => {
     expect(wrapper.find('.hd-hidden')).toHaveLength(1);
+  });
+
+  it('should have the className according to hide from props', () => {
+    expect(wrapper.find('.hd-hide-gt-md')).toHaveLength(1);
   });
 
   it('should have the className according to hideXs from props', () => {
