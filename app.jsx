@@ -1,12 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { render } from 'react-dom';
-import { Button, Flex, Grid } from './src';
+import { Button, Each, Flex, Grid, When } from './src';
 import './app.scss';
 
+const items = [{ color: 'Red' }, { color: 'Green' }];
+const Color = ({ color }) => <li>{color}</li>;
+Color.defaultProps = { color: '' };
+Color.propTypes = { color: PropTypes.string };
+
 const App = () => (
-  <Grid className="app-container" container hideMd>
+  <Grid className="app-container" container>
     <Grid md={12}>
       <h1>Component UI - Simple components for React</h1>
+      <When is={/test/.test('test')}>
+        <p>Show this when test is true</p>
+      </When>
+      <ul>
+        <Each items={items} component={Color} />
+      </ul>
     </Grid>
     <Grid md={12}>
       <h2>Button</h2>
