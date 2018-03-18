@@ -1,6 +1,13 @@
 # component-ui
 Simple components for React. Bring your own CSS reset.
 
+- [Button](#Button)
+- [Flex](#Flex)
+- [Grid](#Grid)
+- [Utils](#Utils)
+  - [Each](#Each)
+  - [When](#When)
+
 ## Install with NPM
 `npm install --save component-ui`
 
@@ -18,7 +25,7 @@ Simple components for React. Bring your own CSS reset.
 
 ## Components
 
-### Button
+### <a name="Button"></a>Button
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
 | `className` | `String`   | CSS class passed into the button element
@@ -43,7 +50,7 @@ const ButtonExamples = (props) => (
 );
 ```
 
-### Flex
+### <a name="Flex"></a>Flex
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
 | `align`     | `String`   | Aligns the children within the component
@@ -89,7 +96,7 @@ const FlexExamples = () => (
 );
 ```
 
-### Grid
+### <a name="Grid"></a>Grid
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
 | `className` | `String`   | CSS class passed into the button element
@@ -124,9 +131,9 @@ const GridExamples = () => (
 );
 ```
 
-### Utils
+### <a name="Utils"></a>Utils
 
-#### Each
+#### <a name="Each"></a>Each
 | Property    | Type        | Description
 | ----------- | ----------- | ---------------------------------------
 | `items`     | `Array`     | Array of objects to map to components
@@ -153,7 +160,7 @@ const EachExample = () => (
 );
 ```
 
-#### When
+#### <a name="When"></a>When
 | Property    | Type        | Description
 | ----------- | ----------- | ---------------------------------------
 | `is`        | `Boolean`   | Renders the children if value is truthy
