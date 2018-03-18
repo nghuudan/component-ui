@@ -59,11 +59,10 @@ const ButtonExamples = (props) => (
 | `grow`      | `Boolean`  | Fills the space available in the parent
 | `hidden`    | `Boolean`  | Hides the component (display: none)
 | `hide`      | `String`   | Hides the component for the screen size
-| `hideXs`    | `Boolean`  | Hidden for Extra Small screens and up
-| `hideSm`    | `Boolean`  | Hidden for Small screens and up
-| `hideMd`    | `Boolean`  | Hidden for Medium screens and up
-| `hideLg`    | `Boolean`  | Hidden for Large screens and up
-| `hideXl`    | `Boolean`  | Hidden for Extra Large screens and up
+| `hideXs`    | `Boolean`  | Hidden for Extra Small to Small screens
+| `hideSm`    | `Boolean`  | Hidden for Small to Medium screens
+| `hideMd`    | `Boolean`  | Hidden for Medium to Large screens
+| `hideLg`    | `Boolean`  | Hidden for Large to Extra Large screens
 | `layout`    | `String`   | Direction to layout the children within
 | `overflow`  | `Boolean`  | Allows scrolling of overflowing content
 | `shrink`    | `Boolean`  | Shrinks to allow siblings to fit parent
@@ -110,11 +109,10 @@ const FlexExamples = () => (
 | `container` | `Boolean`  | Becomes a container for Grid components
 | `hidden`    | `Boolean`  | Hides the component (display: none)
 | `hide`      | `String`   | Hides the component for the screen size
-| `hideXs`    | `Boolean`  | Hidden for Extra Small screens and up
-| `hideSm`    | `Boolean`  | Hidden for Small screens and up
-| `hideMd`    | `Boolean`  | Hidden for Medium screens and up
-| `hideLg`    | `Boolean`  | Hidden for Large screens and up
-| `hideXl`    | `Boolean`  | Hidden for Extra Large screens and up
+| `hideXs`    | `Boolean`  | Hidden for Extra Small to Small screens
+| `hideSm`    | `Boolean`  | Hidden for Small to Medium screens
+| `hideMd`    | `Boolean`  | Hidden for Medium to Large screens
+| `hideLg`    | `Boolean`  | Hidden for Large to Extra Large screens
 | `xs`        | `Number`   | Grid size (1-12) for Extra Small screens
 | `sm`        | `Number`   | Grid size (1-12) for Small screens
 | `md`        | `Number`   | Grid size (1-12) for Medium screens
