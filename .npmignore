@@ -2,6 +2,7 @@ coverage/
 src/
 .babelrc
 .eslintrc*
+.sass-lint*
 /app.*
 /jest.*
 /webpack.*
