@@ -1,12 +1,12 @@
 # component-ui
 Simple components for React. Bring your own CSS reset.
 
-- [Button](#Button)
-- [Flex](#Flex)
-- [Grid](#Grid)
-- [Utils](#Utils)
-  - [Each](#Each)
-  - [When](#When)
+- [Button](#button)
+- [Flex](#flex)
+- [Grid](#grid)
+- [Utils](#utils)
+  - [Each](#each)
+  - [When](#when)
 
 ## Install with NPM
 `npm install --save component-ui`
@@ -25,7 +25,7 @@ Simple components for React. Bring your own CSS reset.
 
 ## Components
 
-### <a name="Button"></a>Button
+### Button
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
 | `className` | `String`   | CSS class passed into the button element
@@ -50,7 +50,7 @@ const ButtonExamples = (props) => (
 );
 ```
 
-### <a name="Flex"></a>Flex
+### Flex
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
 | `align`     | `String`   | Aligns the children within the component
@@ -58,6 +58,7 @@ const ButtonExamples = (props) => (
 | `className` | `String`   | CSS class passed into the button element
 | `grow`      | `Boolean`  | Fills the space available in the parent
 | `hidden`    | `Boolean`  | Hides the component (display: none)
+| `hide`      | `String`   | Hides the component for the screen size
 | `hideXs`    | `Boolean`  | Hidden for Extra Small screens and up
 | `hideSm`    | `Boolean`  | Hidden for Small screens and up
 | `hideMd`    | `Boolean`  | Hidden for Medium screens and up
@@ -77,10 +78,16 @@ align:
   end      | end-{start, center, around, between}
   stretch  | stretch-{start, center, end, around, between}
   baseline | baseline-{start, center, end, around, between}
+hide:
+  xs, gt-xs, lt-xs | extra small, greater than, less than
+  sm, gt-sm, lt-sm
+  md, gt-md, lt-md
+  lg, gt-lg, lt-lg
+  xl, gt-xl, lt-xl
 */
 const FlexExamples = () => (
   <Flex align="start-center" className="flex-example" layout="row">
-    <Flex align="stretch-start" basis={50} layout="column">
+    <Flex align="stretch-start" basis={50} hide="gt-md" layout="column">
       <p>Content</p>
     </Flex>
     <Flex align="center-end" grow hideLg layout="column">
@@ -96,12 +103,13 @@ const FlexExamples = () => (
 );
 ```
 
-### <a name="Grid"></a>Grid
+### Grid
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
 | `className` | `String`   | CSS class passed into the button element
 | `container` | `Boolean`  | Becomes a container for Grid components
 | `hidden`    | `Boolean`  | Hides the component (display: none)
+| `hide`      | `String`   | Hides the component for the screen size
 | `hideXs`    | `Boolean`  | Hidden for Extra Small screens and up
 | `hideSm`    | `Boolean`  | Hidden for Small screens and up
 | `hideMd`    | `Boolean`  | Hidden for Medium screens and up
@@ -116,9 +124,17 @@ const FlexExamples = () => (
 import React from 'react';
 import { Grid } from 'component-ui';
 
+/*
+hide:
+  xs, gt-xs, lt-xs - extra small, greater than, less than
+  sm, gt-sm, lt-sm
+  md, gt-md, lt-md
+  lg, gt-lg, lt-lg
+  xl, gt-xl, lt-xl
+*/
 const GridExamples = () => (
   <Grid className="grid-example" container>
-    <Grid xs={12} sm={6} md={4}>
+    <Grid hide="lt-md" xs={12} sm={6} md={4}>
       <p>Content</p>
     </Grid>
     <Grid hideMd xs={12} sm={6} md={4}>
@@ -131,9 +147,9 @@ const GridExamples = () => (
 );
 ```
 
-### <a name="Utils"></a>Utils
+### Utils
 
-#### <a name="Each"></a>Each
+#### Each
 | Property    | Type        | Description
 | ----------- | ----------- | ---------------------------------------
 | `items`     | `Array`     | Array of objects to map to components
@@ -160,7 +176,7 @@ const EachExample = () => (
 );
 ```
 
-#### <a name="When"></a>When
+#### When
 | Property    | Type        | Description
 | ----------- | ----------- | ---------------------------------------
 | `is`        | `Boolean`   | Renders the children if value is truthy
