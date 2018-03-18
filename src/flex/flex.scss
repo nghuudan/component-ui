@@ -1,3 +1,4 @@
+@import '../media';
 @import '../vars';
 
 .hd-flex {
@@ -50,42 +51,8 @@
   }
 }
 
-@media screen and (min-width: $hd-media-xs-width) {
-  .hd-flex {
-    &.hd-hide-xs {
-      display: none;
-    }
-  }
-}
-
-@media screen and (min-width: $hd-media-sm-width) {
-  .hd-flex {
-    &.hd-hide-sm {
-      display: none;
-    }
-  }
-}
-
-@media screen and (min-width: $hd-media-md-width) {
-  .hd-flex {
-    &.hd-hide-md {
-      display: none;
-    }
-  }
-}
-
-@media screen and (min-width: $hd-media-lg-width) {
-  .hd-flex {
-    &.hd-hide-lg {
-      display: none;
-    }
-  }
-}
-
-@media screen and (min-width: $hd-media-xl-width) {
-  .hd-flex {
-    &.hd-hide-xl {
-      display: none;
-    }
-  }
-}
+@include hd-media-hide(flex, xs, $hd-media-xs-width, $hd-media-sm-width);
+@include hd-media-hide(flex, sm, $hd-media-sm-width, $hd-media-md-width);
+@include hd-media-hide(flex, md, $hd-media-md-width, $hd-media-lg-width);
+@include hd-media-hide(flex, lg, $hd-media-lg-width, $hd-media-xl-width);
+@include hd-media-hide(flex, xl, $hd-media-xl-width, 0);

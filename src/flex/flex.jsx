@@ -5,9 +5,9 @@ import classNames from 'classnames';
 const Flex = ({
   align, basis, children,
   className, grow, hidden,
-  hideXs, hideSm, hideMd,
-  hideLg, hideXl, layout,
-  overflow, shrink,
+  hide, hideXs, hideSm,
+  hideMd, hideLg, hideXl,
+  layout, overflow, shrink,
 }) => (
   <div className={
     classNames({
@@ -19,6 +19,7 @@ const Flex = ({
       'hd-row': layout === 'row',
       'hd-grow': grow,
       'hd-hidden': hidden,
+      [`hd-hide-${hide}`]: hide,
       'hd-hide-xs': hideXs,
       'hd-hide-sm': hideSm,
       'hd-hide-md': hideMd,
@@ -40,6 +41,7 @@ Flex.defaultProps = {
   className: '',
   grow: false,
   hidden: false,
+  hide: '',
   hideXs: false,
   hideSm: false,
   hideMd: false,
@@ -57,6 +59,7 @@ Flex.propTypes = {
   className: PropTypes.string,
   grow: PropTypes.bool,
   hidden: PropTypes.bool,
+  hide: PropTypes.string,
   hideXs: PropTypes.bool,
   hideSm: PropTypes.bool,
   hideMd: PropTypes.bool,
