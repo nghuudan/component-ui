@@ -12,6 +12,7 @@
   font-size: $hd-button-font-size;
   font-weight: 300;
   letter-spacing: .1em;
+  line-height: 1em;
   margin: .5em .3em;
   outline: 0;
   padding: 1em 2em;
@@ -31,6 +32,20 @@
   &.hd-disabled {
     color: $hd-button-disabled-font-color;
     opacity: .3;
+  }
+
+  &.hd-confirm {
+    background-color: $hd-button-confirm-bg-color;
+
+    &:not(.hd-disabled) {
+      &:hover {
+        background-color: $hd-button-confirm-hover-bg-color;
+      }
+
+      &:active {
+        background-color: $hd-button-confirm-active-bg-color;
+      }
+    }
   }
 
   &.hd-primary {

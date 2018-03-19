@@ -10,6 +10,7 @@ const App = () => (
       <h1 className="app-title">Component UI &mdash; Simple components for React</h1>
       <h2 className="app-heading">Button</h2>
       <Flex>
+        <Button confirm>confirm</Button>
         <Button primary>primary</Button>
         <Button warning>warning</Button>
         <Button>default</Button>
