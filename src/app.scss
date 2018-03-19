@@ -2,8 +2,9 @@
 
 $app-body-bg-color: #fff;
 $app-body-font-color: #333;
-$app-title-border-color: #ccc;
 $app-container-box-shadow-color: rgba(0, 0, 0, .3);
+$app-flex-example-border-color: #ccc;
+$app-title-border-color: #ccc;
 
 html {
   height: 100%;
@@ -35,5 +36,15 @@ body {
     font-size: 1.5em;
     font-weight: 400;
     margin: 1em 0;
+  }
+
+  .app-flex-example {
+    font-family: Monaco, 'Courier New', monospace;
+    font-weight: 600;
+
+    .hd-flex {
+      border: 2px solid $app-flex-example-border-color;
+      padding: 1em;
+    }
   }
 }
