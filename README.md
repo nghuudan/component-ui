@@ -30,6 +30,7 @@ Simple components for React. Bring your own CSS reset.
 | ----------- | ---------- | ----------------------------------------
 | `className` | `String`   | CSS class passed into the button element
 | `click`     | `Function` | Click event handler passed to the button
+| `confirm`   | `Boolean`  | Applies confirm styles to the button
 | `disabled`  | `Boolean`  | Disables the button
 | `primary`   | `Boolean`  | Applies primary styles to the button
 | `submit`    | `Boolean`  | Button will submit when placed in forms
@@ -42,7 +43,7 @@ const ButtonExamples = (props) => (
   <div>
     <Button className="button-example">Button with className</Button>
     <Button click={props.click}>Button with click handler</Button>
-    <Button disabled>Disabled</Button>
+    <Button confirm disabled>Confirm Disabled</Button>
     <Button primary>Primary</Button>
     <Button submit>Submit</Button>
     <Button warning>Warning</Button>
