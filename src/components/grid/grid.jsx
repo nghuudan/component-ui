@@ -4,9 +4,9 @@ import classNames from 'classnames';
 
 const Grid = ({
   children, className,
-  container, hidden,
-  hide, hideXs, hideSm,
-  hideMd, hideLg, hideXl,
+  container, hidden, hide,
+  hideXs, hideSm, hideMd,
+  hideLg, hideXl, show,
   xs, sm, md, lg, xl,
 }) => (
   <div className={
@@ -21,6 +21,8 @@ const Grid = ({
       'hd-hide-md': hideMd,
       'hd-hide-lg': hideLg,
       'hd-hide-xl': hideXl,
+      'hd-show': show,
+      [`hd-show-${show}`]: show,
       [`hd-xs-${xs}`]: xs,
       [`hd-sm-${sm}`]: sm,
       [`hd-md-${md}`]: md,
@@ -44,6 +46,7 @@ Grid.defaultProps = {
   hideMd: false,
   hideLg: false,
   hideXl: false,
+  show: '',
   xs: 0,
   sm: 0,
   md: 0,
@@ -62,6 +65,7 @@ Grid.propTypes = {
   hideMd: PropTypes.bool,
   hideLg: PropTypes.bool,
   hideXl: PropTypes.bool,
+  show: PropTypes.string,
   xs: PropTypes.number,
   sm: PropTypes.number,
   md: PropTypes.number,

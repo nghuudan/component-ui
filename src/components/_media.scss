@@ -27,3 +27,37 @@
     }
   }
 }
+
+@mixin hd-media-show($name, $size, $media-width, $media-width-next) {
+  @if $media-width-next > $media-width {
+    @media screen and (min-width: $media-width) and (max-width: $media-width-next - 1) {
+      .hd-#{$name} {
+        &.hd-show {
+          &.hd-show-#{$size} {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $media-width) {
+    .hd-#{$name} {
+      &.hd-show {
+        &.hd-show-gt-#{$size} {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $media-width - 1) {
+    .hd-#{$name} {
+      &.hd-show {
+        &.hd-show-lt-#{$size} {
+          display: flex;
+        }
+      }
+    }
+  }
+}

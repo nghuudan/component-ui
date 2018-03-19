@@ -37,6 +37,10 @@
   &.hd-hidden {
     display: none;
   }
+
+  &.hd-show {
+    display: none;
+  }
 }
 
 @media screen and (min-width: $hd-media-sm-width) {
@@ -115,3 +119,9 @@
 @include hd-media-hide(grid, md, $hd-media-md-width, $hd-media-lg-width);
 @include hd-media-hide(grid, lg, $hd-media-lg-width, $hd-media-xl-width);
 @include hd-media-hide(grid, xl, $hd-media-xl-width, 0);
+
+@include hd-media-show(grid, xs, $hd-media-xs-width, $hd-media-sm-width);
+@include hd-media-show(grid, sm, $hd-media-sm-width, $hd-media-md-width);
+@include hd-media-show(grid, md, $hd-media-md-width, $hd-media-lg-width);
+@include hd-media-show(grid, lg, $hd-media-lg-width, $hd-media-xl-width);
+@include hd-media-show(grid, xl, $hd-media-xl-width, 0);

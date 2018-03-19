@@ -3,8 +3,8 @@
 $app-body-bg-color: #fff;
 $app-body-font-color: #333;
 $app-container-box-shadow-color: rgba(0, 0, 0, .3);
-$app-flex-example-bg-color: rgba(0, 0, 0, .1);
-$app-flex-example-border-color: #999;
+$app-example-bg-color: rgba(0, 0, 0, .1);
+$app-example-border-color: #999;
 $app-title-border-color: #ccc;
 
 html {
@@ -34,9 +34,10 @@ body {
   }
 
   .app-heading {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 400;
-    margin: 1em 0;
+    margin-bottom: 1em;
+    margin-top: 2em;
   }
 
   .app-flex-example {
@@ -44,8 +45,19 @@ body {
     font-weight: 600;
 
     .hd-flex {
-      background-color: $app-flex-example-bg-color;
-      border: 1px solid $app-flex-example-border-color;
+      background-color: $app-example-bg-color;
+      border: 1px solid $app-example-border-color;
+      padding: 1em;
+    }
+  }
+
+  .app-grid-example {
+    font-family: Monaco, 'Courier New', monospace;
+    font-weight: 600;
+
+    .hd-grid {
+      background-color: $app-example-bg-color;
+      border: 1px solid $app-example-border-color;
       padding: 1em;
     }
   }

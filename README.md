@@ -66,6 +66,7 @@ const ButtonExamples = (props) => (
 | `hideLg`    | `Boolean`  | Hidden for Large to Extra Large screens
 | `layout`    | `String`   | Direction to layout the children within
 | `overflow`  | `Boolean`  | Allows scrolling of overflowing content
+| `show`      | `String`   | Shows the component for the screen size
 | `shrink`    | `Boolean`  | Shrinks to allow siblings to fit parent
 | `wrap`      | `Boolean`  | Allows wrapping the children to fit
 ```javascript
@@ -79,7 +80,7 @@ align:
   end      | end-{start, center, around, between}
   stretch  | stretch-{start, center, end, around, between}
   baseline | baseline-{start, center, end, around, between}
-hide:
+hide/show:
   xs, gt-xs, lt-xs | extra small, greater than, less than
   sm, gt-sm, lt-sm
   md, gt-md, lt-md
@@ -115,6 +116,7 @@ const FlexExamples = () => (
 | `hideSm`    | `Boolean`  | Hidden for Small to Medium screens
 | `hideMd`    | `Boolean`  | Hidden for Medium to Large screens
 | `hideLg`    | `Boolean`  | Hidden for Large to Extra Large screens
+| `show`      | `String`   | Shows the component for the screen size
 | `xs`        | `Number`   | Grid size (1-12) for Extra Small screens
 | `sm`        | `Number`   | Grid size (1-12) for Small screens
 | `md`        | `Number`   | Grid size (1-12) for Medium screens
@@ -125,7 +127,7 @@ import React from 'react';
 import { Grid } from 'component-ui';
 
 /*
-hide:
+hide/show:
   xs, gt-xs, lt-xs - extra small, greater than, less than
   sm, gt-sm, lt-sm
   md, gt-md, lt-md

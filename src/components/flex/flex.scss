@@ -51,6 +51,10 @@
     display: none;
   }
 
+  &.hd-show {
+    display: none;
+  }
+
   &.hd-wrap {
     flex-wrap: wrap;
   }
@@ -61,3 +65,9 @@
 @include hd-media-hide(flex, md, $hd-media-md-width, $hd-media-lg-width);
 @include hd-media-hide(flex, lg, $hd-media-lg-width, $hd-media-xl-width);
 @include hd-media-hide(flex, xl, $hd-media-xl-width, 0);
+
+@include hd-media-show(flex, xs, $hd-media-xs-width, $hd-media-sm-width);
+@include hd-media-show(flex, sm, $hd-media-sm-width, $hd-media-md-width);
+@include hd-media-show(flex, md, $hd-media-md-width, $hd-media-lg-width);
+@include hd-media-show(flex, lg, $hd-media-lg-width, $hd-media-xl-width);
+@include hd-media-show(flex, xl, $hd-media-xl-width, 0);

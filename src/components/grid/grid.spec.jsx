@@ -15,6 +15,7 @@ describe('Grid', () => {
       hideMd
       hideLg
       hideXl
+      show="lt-sm"
       xs={5}
       sm={6}
       md={7}
@@ -79,5 +80,13 @@ describe('Grid', () => {
 
   it('should have the className according to hideXl from props', () => {
     expect(wrapper.find('.hd-hide-xl')).toHaveLength(1);
+  });
+
+  it('should have the base className according to show from props', () => {
+    expect(wrapper.find('.hd-show')).toHaveLength(1);
+  });
+
+  it('should have the className according to show from props', () => {
+    expect(wrapper.find('.hd-show-lt-sm')).toHaveLength(1);
   });
 });
