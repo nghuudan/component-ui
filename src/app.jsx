@@ -26,14 +26,14 @@ const App = () => (
         </Flex>
         <Flex align="stretch-start" grow layout="column" shrink>
           <p>align=stretch-start, grow, layout=column</p>
-          <Flex align="center-around" layout="row">
-            <p>align=center-around, layout=row</p>
+          <Flex align="center-around" layout="row" show="gt-md">
+            <p>align=center-around, layout=row, show=gt-md</p>
             <p>content</p>
             <p>content</p>
           </Flex>
-          <Flex align="stretch-start" layout="row">
+          <Flex align="stretch-start" layout="row" show="gt-sm">
             <Flex align="center-between" basis={66}>
-              <p>align=center-between, basis=66</p>
+              <p>align=center-between, basis=66, show=gt-sm</p>
               <p>content</p>
             </Flex>
             <Flex basis={33} layout="column">
@@ -47,6 +47,19 @@ const App = () => (
           </Flex>
         </Flex>
       </Flex>
+    </Grid>
+
+    <h2 className="app-heading">Grid</h2>
+    <Grid className="app-grid-example" container xs={12}>
+      <Grid xs={6} sm={12} md={2} lg={1}>
+        <p>xs=6, sm=12, md=2, lg=1</p>
+      </Grid>
+      <Grid xs={6} sm={8} md={4} lg={4}>
+        <p>xs=6, sm=8, md=4, lg=4</p>
+      </Grid>
+      <Grid xs={12} sm={4} md={6} lg={7}>
+        <p>xs=12, sm=4, md=6, lg=7</p>
+      </Grid>
     </Grid>
   </Grid>
 );

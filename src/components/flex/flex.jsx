@@ -6,7 +6,7 @@ const Flex = ({
   align, basis, children, className,
   grow, hidden, hide, hideXs, hideSm,
   hideMd, hideLg, hideXl, layout,
-  overflow, shrink, wrap,
+  overflow, show, shrink, wrap,
 }) => (
   <div className={
     classNames({
@@ -25,6 +25,8 @@ const Flex = ({
       'hd-hide-lg': hideLg,
       'hd-hide-xl': hideXl,
       'hd-overflow': overflow,
+      'hd-show': show,
+      [`hd-show-${show}`]: show,
       'hd-shrink': shrink,
       'hd-wrap': wrap,
     })
@@ -49,6 +51,7 @@ Flex.defaultProps = {
   hideXl: false,
   layout: 'row',
   overflow: false,
+  show: '',
   shrink: false,
   wrap: false,
 };
@@ -68,6 +71,7 @@ Flex.propTypes = {
   hideXl: PropTypes.bool,
   layout: PropTypes.oneOf(['column', 'row']),
   overflow: PropTypes.bool,
+  show: PropTypes.string,
   shrink: PropTypes.bool,
   wrap: PropTypes.bool,
 };
