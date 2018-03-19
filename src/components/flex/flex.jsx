@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Flex = ({
-  align, basis, children,
-  className, grow, hidden,
-  hide, hideXs, hideSm,
-  hideMd, hideLg, hideXl,
-  layout, overflow, shrink,
+  align, basis, children, className,
+  grow, hidden, hide, hideXs, hideSm,
+  hideMd, hideLg, hideXl, layout,
+  overflow, shrink, wrap,
 }) => (
   <div className={
     classNames({
@@ -27,6 +26,7 @@ const Flex = ({
       'hd-hide-xl': hideXl,
       'hd-overflow': overflow,
       'hd-shrink': shrink,
+      'hd-wrap': wrap,
     })
   }
   >
@@ -50,6 +50,7 @@ Flex.defaultProps = {
   layout: 'row',
   overflow: false,
   shrink: false,
+  wrap: false,
 };
 
 Flex.propTypes = {
@@ -68,6 +69,7 @@ Flex.propTypes = {
   layout: PropTypes.oneOf(['column', 'row']),
   overflow: PropTypes.bool,
   shrink: PropTypes.bool,
+  wrap: PropTypes.bool,
 };
 
 export default Flex;

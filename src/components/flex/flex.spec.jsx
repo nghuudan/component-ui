@@ -20,6 +20,7 @@ describe('Flex', () => {
       hideMd
       hideLg
       hideXl
+      wrap
     >
       <Child />
     </Flex>
@@ -79,5 +80,9 @@ describe('Flex', () => {
 
   it('should have the className according to hideXl from props', () => {
     expect(wrapper.find('.hd-hide-xl')).toHaveLength(1);
+  });
+
+  it('should have the className according to wrap from props', () => {
+    expect(wrapper.find('.hd-wrap')).toHaveLength(1);
   });
 });

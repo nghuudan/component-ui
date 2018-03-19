@@ -2,8 +2,10 @@
 
 $app-body-bg-color: #fff;
 $app-body-font-color: #333;
-$app-title-border-color: #ccc;
 $app-container-box-shadow-color: rgba(0, 0, 0, .3);
+$app-flex-example-bg-color: rgba(0, 0, 0, .1);
+$app-flex-example-border-color: #999;
+$app-title-border-color: #ccc;
 
 html {
   height: 100%;
@@ -13,7 +15,7 @@ body {
   background-color: $app-body-bg-color;
   color: $app-body-font-color;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 10pt;
+  font-size: 12pt;
   height: 100%;
   margin: 0;
 }
@@ -25,7 +27,7 @@ body {
 
   .app-title {
     border-bottom: 1px solid $app-title-border-color;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 300;
     margin: 1em 0;
     padding-bottom: .2em;
@@ -35,5 +37,16 @@ body {
     font-size: 1.5em;
     font-weight: 400;
     margin: 1em 0;
+  }
+
+  .app-flex-example {
+    font-family: Monaco, 'Courier New', monospace;
+    font-weight: 600;
+
+    .hd-flex {
+      background-color: $app-flex-example-bg-color;
+      border: 1px solid $app-flex-example-border-color;
+      padding: 1em;
+    }
   }
 }

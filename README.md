@@ -56,7 +56,7 @@ const ButtonExamples = (props) => (
 | ----------- | ---------- | ----------------------------------------
 | `align`     | `String`   | Aligns the children within the component
 | `basis`     | `Number`   | Percent of the parent Flex used for size
-| `className` | `String`   | CSS class passed into the button element
+| `className` | `String`   | CSS class passed into the element
 | `grow`      | `Boolean`  | Fills the space available in the parent
 | `hidden`    | `Boolean`  | Hides the component (display: none)
 | `hide`      | `String`   | Hides the component for the screen size
@@ -67,6 +67,7 @@ const ButtonExamples = (props) => (
 | `layout`    | `String`   | Direction to layout the children within
 | `overflow`  | `Boolean`  | Allows scrolling of overflowing content
 | `shrink`    | `Boolean`  | Shrinks to allow siblings to fit parent
+| `wrap`      | `Boolean`  | Allows wrapping the children to fit
 ```javascript
 import React from 'react';
 import { Flex } from 'component-ui';
@@ -106,7 +107,7 @@ const FlexExamples = () => (
 ### Grid
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
-| `className` | `String`   | CSS class passed into the button element
+| `className` | `String`   | CSS class passed into the element
 | `container` | `Boolean`  | Becomes a container for Grid components
 | `hidden`    | `Boolean`  | Hides the component (display: none)
 | `hide`      | `String`   | Hides the component for the screen size
