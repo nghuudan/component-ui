@@ -7,6 +7,9 @@ $hd-media-xl-width: 1280px;
 $hd-button-active-bg-color: #666;
 $hd-button-bg-color: #000;
 $hd-button-box-shadow-color: rgba(0, 0, 0, .3);
+$hd-button-confirm-active-bg-color: #0c9;
+$hd-button-confirm-bg-color: #063;
+$hd-button-confirm-hover-bg-color: #096;
 $hd-button-disabled-font-color: #ccc;
 $hd-button-focus-outline-color: #ccc;
 $hd-button-font-color: #eee;
@@ -19,3 +22,5 @@ $hd-button-primary-hover-bg-color: #09c;
 $hd-button-warning-active-bg-color: #f90;
 $hd-button-warning-bg-color: #930;
 $hd-button-warning-hover-bg-color: #c60;
+
+$hd-grid-container-gutter: 32px;

@@ -25,6 +25,11 @@ describe('Button', () => {
     expect(wrapper.prop('disabled')).toBe(true);
   });
 
+  it('should have the className for confirm from props', () => {
+    const wrapper = shallow(<Button confirm />);
+    expect(wrapper.is('.hd-confirm')).toBe(true);
+  });
+
   it('should have the className for primary from props', () => {
     const wrapper = shallow(<Button primary />);
     expect(wrapper.is('.hd-primary')).toBe(true);
