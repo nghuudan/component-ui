@@ -12,8 +12,15 @@
 
   &.hd-container {
     display: flex;
+    margin: auto;
+
+    .hd-container {
+      padding: 0;
+    }
 
     @for $i from 1 through 12 {
+      width: $hd-media-xs-width - $hd-grid-container-gutter;
+
       > .hd-xs-#{$i} {
         flex-basis: (100% / 12 * $i);
       }
@@ -35,6 +42,8 @@
 @media screen and (min-width: $hd-media-sm-width) {
   .hd-grid {
     &.hd-container {
+      width: $hd-media-sm-width - $hd-grid-container-gutter;
+
       @for $i from 1 through 12 {
         > .hd-sm-#{$i} {
           flex-basis: (100% / 12 * $i);
@@ -53,6 +62,8 @@
 @media screen and (min-width: $hd-media-md-width) {
   .hd-grid {
     &.hd-container {
+      width: $hd-media-md-width - $hd-grid-container-gutter;
+
       @for $i from 1 through 12 {
         > .hd-md-#{$i} {
           flex-basis: (100% / 12 * $i);
@@ -70,6 +81,8 @@
 @media screen and (min-width: $hd-media-lg-width) {
   .hd-grid {
     &.hd-container {
+      width: $hd-media-lg-width - $hd-grid-container-gutter;
+
       @for $i from 1 through 12 {
         > .hd-lg-#{$i} {
           flex-basis: (100% / 12 * $i);
@@ -86,6 +99,8 @@
 @media screen and (min-width: $hd-media-xl-width) {
   .hd-grid {
     &.hd-container {
+      width: $hd-media-xl-width - $hd-grid-container-gutter;
+
       @for $i from 1 through 12 {
         > .hd-xl-#{$i} {
           flex-basis: (100% / 12 * $i);

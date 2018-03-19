@@ -1,12 +1,21 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const extractSass = new ExtractTextPlugin({
+  disable: process.env.NODE_ENV === 'development',
+  filename: '[name].[hash].css',
+});
 
 module.exports = {
   devServer: {
     port: 3333,
   },
 
-  entry: path.resolve('app'),
+  entry: {
+    docs: path.join(__dirname, 'src', 'app'),
+  },
 
   module: {
     rules: [
@@ -18,16 +27,27 @@ module.exports = {
       {
         exclude: /node_modules/,
         test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+        use: extractSass.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', {
+            loader: 'sass-loader',
+            options: {
+              outputStyle: 'compressed',
+            },
+          }],
+        }),
       },
     ],
   },
 
   output: {
     filename: '[name].[chunkhash].js',
+    path: path.resolve('docs'),
   },
 
   plugins: [
+    extractSass,
+    new CleanWebpackPlugin(['docs']),
     new HtmlWebpackPlugin({
       template: path.join('src', 'index.html'),
     }),
