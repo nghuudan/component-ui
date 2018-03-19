@@ -67,6 +67,7 @@ const ButtonExamples = (props) => (
 | `layout`    | `String`   | Direction to layout the children within
 | `overflow`  | `Boolean`  | Allows scrolling of overflowing content
 | `shrink`    | `Boolean`  | Shrinks to allow siblings to fit parent
+| `wrap`      | `Boolean`  | Allows wrapping the children to fit
 ```javascript
 import React from 'react';
 import { Flex } from 'component-ui';
