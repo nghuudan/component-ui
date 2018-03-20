@@ -98,7 +98,7 @@ const FlexExamples = () => (
     <Flex align="center-start" layout="column" overflow shrink>
       <p>Content</p>
     </Flex>
-    <Flex align="end" hidden layout="column" overflow shrink>
+    <Flex align="end" hidden layout="column" overflow show="lt-md" shrink>
       <p>Content</p>
     </Flex>
   </Flex>
@@ -142,7 +142,7 @@ const GridExamples = () => (
     <Grid hideMd xs={12} sm={6} md={4}>
       <p>Content</p>
     </Grid>
-    <Grid hidden xs={12} sm={6} md={4}>
+    <Grid show="gt-md" xs={12} sm={6} md={4}>
       <p>Content</p>
     </Grid>
   </Grid>
@@ -187,8 +187,13 @@ import React from 'react';
 import { When } from 'component-ui';
 
 const WhenExample = (props) => (
-  <When is={props.isExampleReady}>
-    <p>Content is rendered</p>
-  </When>
+  <div>
+    <When is={props.isExampleReady}>
+      <p>Content is rendered</p>
+    </When>
+    <When is={!props.isExampleReady}>
+      <p>Content is not rendered</p>
+    </When>
+  </div>
 );
 ```
