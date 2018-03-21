@@ -81,11 +81,11 @@ align:
   stretch  | stretch-{start, center, end, around, between}
   baseline | baseline-{start, center, end, around, between}
 hide/show:
-  xs, gt-xs, lt-xs | extra small, greater than, less than
-  sm, gt-sm, lt-sm
-  md, gt-md, lt-md
-  lg, gt-lg, lt-lg
-  xl, gt-xl, lt-xl
+  xs, gt-xs, lt-xs | extra small (320px), greater than, less than
+  sm, gt-sm, lt-sm | small (480px), greater than, less than
+  md, gt-md, lt-md | medium (768px), greater than, less than
+  lg, gt-lg, lt-lg | large (1024px), greater than, less than
+  xl, gt-xl, lt-xl | extra large (1280px), greater than, less than
 */
 const FlexExamples = () => (
   <Flex align="start-center" className="flex-example" layout="row">
@@ -128,11 +128,11 @@ import { Grid } from 'component-ui';
 
 /*
 hide/show:
-  xs, gt-xs, lt-xs - extra small, greater than, less than
-  sm, gt-sm, lt-sm
-  md, gt-md, lt-md
-  lg, gt-lg, lt-lg
-  xl, gt-xl, lt-xl
+  xs, gt-xs, lt-xs | extra small (320px), greater than, less than
+  sm, gt-sm, lt-sm | small (480px), greater than, less than
+  md, gt-md, lt-md | medium (768px), greater than, less than
+  lg, gt-lg, lt-lg | large (1024px), greater than, less than
+  xl, gt-xl, lt-xl | extra large (1280px), greater than, less than
 */
 const GridExamples = () => (
   <Grid className="grid-example" container>
