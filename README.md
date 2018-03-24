@@ -4,6 +4,7 @@ Simple components for React. Bring your own CSS reset.
 - [Button](#button)
 - [Flex](#flex)
 - [Grid](#grid)
+- [Spinner](#spinner)
 - [Utils](#utils)
   - [Each](#each)
   - [When](#when)
@@ -146,6 +147,20 @@ const GridExamples = () => (
       <p>Content</p>
     </Grid>
   </Grid>
+);
+```
+
+### Spinner
+| Property    | Type      | Description
+| ----------- | --------- | -----------------------------------------
+| `className` | `String`  | CSS class passed into the element
+| `overlay`   | `Boolean` | Display as centered full-screen overlay
+```javascript
+import React from 'react';
+import { Spinner } from 'component-ui';
+
+const SpinnerExample = () => (
+  <Spinner className="spinner-example" overlay />
 );
 ```
 

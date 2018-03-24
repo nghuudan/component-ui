@@ -3,5 +3,8 @@
     "jest": true
   },
   "extends": "airbnb",
-  "plugins": ["jest"]
+  "plugins": ["jest"],
+  "rules": {
+    "import/prefer-default-export": 0
+  }
 }

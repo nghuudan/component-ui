@@ -1,0 +1,61 @@
+@import '../vars';
+
+.hd-spinner {
+  &.hd-spinner-overlay {
+    align-items: center;
+    background-color: $hd-spinner-bg-color;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10000;
+  }
+
+  .hd-spinner-disc {
+    align-items: center;
+    animation: hd-spinner-rotate 2s infinite;
+    animation-timing-function: linear;
+    border: .25em solid transparent;
+    border-left-color: $hd-spinner-border-color;
+    border-radius: 8em;
+    border-right-color: $hd-spinner-border-color;
+    display: flex;
+    height: 8em;
+    justify-content: center;
+    width: 8em;
+
+    .hd-spinner-disc-inner {
+      animation: hd-spinner-inner-rotate 1s infinite;
+      animation-timing-function: linear;
+      border: .25em solid transparent;
+      border-bottom-color: $hd-spinner-inner-border-color;
+      border-radius: 6em;
+      border-top-color: $hd-spinner-inner-border-color;
+      height: 7em;
+      width: 7em;
+    }
+  }
+}
+
+@keyframes hd-spinner-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes hd-spinner-inner-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
