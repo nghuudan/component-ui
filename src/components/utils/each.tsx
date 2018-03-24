@@ -1,16 +1,20 @@
-import React, { ReactNode } from 'react';
+import React, { StatelessComponent } from 'react';
 
 export interface EachProps {
-  component(): JSX.Element;
-  items: object[];
+  component: StatelessComponent<any>;
+  items?: object[];
 }
 
-const Each = ({ component, items }: EachProps) => {
+const Each: StatelessComponent<EachProps> = ({ component, items }) => {
   const EachComponent = component;
   return (
-    Array.isArray(items) ? items.map((item, index) => (
-      <EachComponent key={new Date(index).getTime()} {...item} />
-    )) : null
+    <>
+      {
+        Array.isArray(items) ? items.map((item, index) => (
+          <EachComponent key={new Date(index).getTime()} {...item} />
+        )) : null
+      }
+    </>
   );
 };
 

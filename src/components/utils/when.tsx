@@ -1,12 +1,16 @@
-import { ReactNode } from 'react';
+import React, { ReactNode, StatelessComponent } from 'react';
 
 export interface WhenProps {
   children: ReactNode;
   is: boolean;
 }
 
-const When = ({ children, is }: WhenProps) => (
-  Boolean(is) ? children : null
+const When: StatelessComponent<WhenProps> = ({ children, is }) => (
+  <>
+    {
+      Boolean(is) ? children : null
+    }
+  </>
 );
 
 export default When;
