@@ -1,24 +1,23 @@
 import React, { ReactNode, StatelessComponent } from 'react';
 import classNames from 'classnames';
-
-export type FlexLayout = 'column' | 'row';
+import { Align, Layout, Media } from '../enums';
 
 export interface FlexProps {
-  align?: string;
+  align?: Align;
   basis?: number;
   children?: ReactNode;
   className?: string;
   grow?: boolean;
   hidden?: boolean;
-  hide?: string;
+  hide?: Media;
   hideXs?: boolean;
   hideSm?: boolean;
   hideMd?: boolean;
   hideLg?: boolean;
   hideXl?: boolean;
-  layout?: FlexLayout;
+  layout?: Layout;
   overflow?: boolean;
-  show?: string;
+  show?: Media;
   shrink?: boolean;
   wrap?: boolean;
 }
@@ -71,21 +70,21 @@ const Flex: StatelessComponent<FlexProps> = ({
 );
 
 Flex.defaultProps = {
-  align: '',
+  align: Align.NONE,
   basis: 0,
   children: null,
   className: '',
   grow: false,
   hidden: false,
-  hide: '',
+  hide: Media.NONE,
   hideXs: false,
   hideSm: false,
   hideMd: false,
   hideLg: false,
   hideXl: false,
-  layout: 'row',
+  layout: Layout.ROW,
   overflow: false,
-  show: '',
+  show: Media.NONE,
   shrink: false,
   wrap: false,
 };

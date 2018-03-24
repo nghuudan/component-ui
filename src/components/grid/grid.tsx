@@ -1,18 +1,19 @@
 import React, { ReactNode, StatelessComponent } from 'react';
 import classNames from 'classnames';
+import Media from '../enums/media.enum';
 
 export interface GridProps {
   children?: ReactNode;
   className?: string;
   container?: boolean;
   hidden?: boolean;
-  hide?: string;
+  hide?: Media;
   hideXs?: boolean;
   hideSm?: boolean;
   hideMd?: boolean;
   hideLg?: boolean;
   hideXl?: boolean;
-  show?: string;
+  show?: Media;
   xs?: number;
   sm?: number;
   md?: number;
@@ -69,13 +70,13 @@ Grid.defaultProps = {
   className: '',
   container: false,
   hidden: false,
-  hide: '',
+  hide: Media.NONE,
   hideXs: false,
   hideSm: false,
   hideMd: false,
   hideLg: false,
   hideXl: false,
-  show: '',
+  show: Media.NONE,
   xs: 0,
   sm: 0,
   md: 0,
