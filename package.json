@@ -8,7 +8,7 @@
     "babel": "babel src/components --ignore spec.js --out-dir dist",
     "build": "npm run clean && npm run lint && npm run babel && npm run sass",
     "build:docs": "webpack --mode production",
-    "build:ts": "npm run clean && npm run lint:ts && tsc",
+    "build:ts": "npm run clean && npm run lint:ts && tsc && npm run sass",
     "clean": "rimraf coverage dist",
     "dist": "npm test && npm run build && npm run build:docs",
     "dist:ts": "npm test && npm run build:ts && npm run build:docs",
