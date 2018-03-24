@@ -5,8 +5,8 @@ export interface WhenProps {
   is: boolean;
 }
 
-const When = ({ children, is }: WhenProps): ReactNode => (
-  Boolean(is) === true ? children : null
+const When = ({ children, is }: WhenProps) => (
+  Boolean(is) ? children : null
 );
 
 export default When;

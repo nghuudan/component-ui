@@ -1,28 +1,32 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, StatelessComponent } from 'react';
 import classNames from 'classnames';
 
 export interface ButtonProps {
-  children: ReactNode;
-  className: string;
-  click(event: React.MouseEvent<HTMLButtonElement>): void;
-  confirm: boolean;
-  disabled: boolean;
-  primary: boolean;
-  submit: boolean;
-  warning: boolean;
+  children?: ReactNode;
+  className?: string;
+  click?(event: React.MouseEvent<HTMLButtonElement>): void;
+  confirm?: boolean;
+  disabled?: boolean;
+  primary?: boolean;
+  submit?: boolean;
+  warning?: boolean;
 }
 
-const Button = ({
-  children, className,
-  click, confirm,
-  disabled, primary,
-  submit, warning,
-}: ButtonProps): JSX.Element => (
+const Button: StatelessComponent<ButtonProps> = ({
+  children,
+  className,
+  click,
+  confirm,
+  disabled,
+  primary,
+  submit,
+  warning,
+}) => (
   <button
     className={
       classNames({
         'hd-button': true,
-        [className]: Boolean(className),
+        [`${className}`]: Boolean(className),
         'hd-confirm': confirm,
         'hd-disabled': disabled,
         'hd-primary': primary,
@@ -36,5 +40,16 @@ const Button = ({
     {children}
   </button>
 );
+
+Button.defaultProps = {
+  children: null,
+  className: '',
+  click: undefined,
+  confirm: false,
+  disabled: false,
+  primary: false,
+  submit: false,
+  warning: false,
+};
 
 export default Button;

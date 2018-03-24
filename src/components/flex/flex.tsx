@@ -1,40 +1,53 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, StatelessComponent } from 'react';
 import classNames from 'classnames';
 
 export type FlexLayout = 'column' | 'row';
 
 export interface FlexProps {
-  align: string;
-  basis: number;
-  children: ReactNode;
-  className: string;
-  grow: boolean;
-  hidden: boolean;
-  hide: string;
-  hideXs: boolean;
-  hideSm: boolean;
-  hideMd: boolean;
-  hideLg: boolean;
-  hideXl: boolean;
-  layout: FlexLayout;
-  overflow: boolean;
-  show: string;
-  shrink: boolean;
-  wrap: boolean;
+  align?: string;
+  basis?: number;
+  children?: ReactNode;
+  className?: string;
+  grow?: boolean;
+  hidden?: boolean;
+  hide?: string;
+  hideXs?: boolean;
+  hideSm?: boolean;
+  hideMd?: boolean;
+  hideLg?: boolean;
+  hideXl?: boolean;
+  layout?: FlexLayout;
+  overflow?: boolean;
+  show?: string;
+  shrink?: boolean;
+  wrap?: boolean;
 }
 
-const Flex = ({
-  align, basis, children, className,
-  grow, hidden, hide, hideXs, hideSm,
-  hideMd, hideLg, hideXl, layout,
-  overflow, show, shrink, wrap,
-}: FlexProps): JSX.Element => (
+const Flex: StatelessComponent<FlexProps> = ({
+  align,
+  basis,
+  children,
+  className,
+  grow,
+  hidden,
+  hide,
+  hideXs,
+  hideSm,
+  hideMd,
+  hideLg,
+  hideXl,
+  layout,
+  overflow,
+  show,
+  shrink,
+  wrap,
+}) => (
   <div className={
     classNames({
       'hd-flex': true,
       [`hd-align-${align}`]: Boolean(align),
-      [`hd-basis-${basis}`]: Number.isInteger(basis),
-      [className]: Boolean(className),
+      [`hd-basis-${basis}`]: Boolean(basis),
+      [`${className}`]: Boolean(className),
       'hd-column': layout === 'column',
       'hd-row': layout === 'row',
       'hd-grow': grow,
@@ -56,5 +69,25 @@ const Flex = ({
     {children}
   </div>
 );
+
+Flex.defaultProps = {
+  align: '',
+  basis: 0,
+  children: null,
+  className: '',
+  grow: false,
+  hidden: false,
+  hide: '',
+  hideXs: false,
+  hideSm: false,
+  hideMd: false,
+  hideLg: false,
+  hideXl: false,
+  layout: 'row',
+  overflow: false,
+  show: '',
+  shrink: false,
+  wrap: false,
+};
 
 export default Flex;

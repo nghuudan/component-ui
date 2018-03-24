@@ -5,7 +5,7 @@ export interface EachProps {
   items: object[];
 }
 
-const Each = ({ component, items }: EachProps): ReactNode => {
+const Each = ({ component, items }: EachProps) => {
   const EachComponent = component;
   return (
     Array.isArray(items) ? items.map((item, index) => (
