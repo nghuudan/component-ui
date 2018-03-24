@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Button } from './components/button'; // import single component
-import { Flex, Grid } from './components'; // import from all components
+import { Flex, Grid, Spinner } from './components'; // import from all components
 import './app.scss';
 
 const App = () => (
@@ -60,6 +60,11 @@ const App = () => (
       <Grid xs={12} sm={4} md={6} lg={7}>
         <p>xs=12, sm=4, md=6, lg=7</p>
       </Grid>
+    </Grid>
+
+    <h2 className="app-heading">Spinner</h2>
+    <Grid xs={12}>
+      <Spinner className="app-spinner-example" />
     </Grid>
   </Grid>
 );
