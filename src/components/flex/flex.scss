@@ -11,7 +11,7 @@
   justify-content: flex-start;
   overflow: hidden;
 
-  @import './align';
+  @import '../align';
 
   &.hd-column {
     flex-direction: column;

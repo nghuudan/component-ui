@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Button } from './components/button'; // import single component
-import { Flex, Grid, Spinner } from './components'; // import from all components
+import { Button } from '../dist/button'; // import single component
+import { Flex, Grid, Spinner } from '../dist'; // import from all components
 import './app.scss';
 
 const App = () => (

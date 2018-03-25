@@ -1,12 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { StatelessComponent } from 'react';
 import classNames from 'classnames';
 
-const Spinner = ({ className, overlay }) => (
+export interface SpinnerProps {
+  className?: string;
+  overlay?: boolean;
+}
+
+const Spinner: StatelessComponent<SpinnerProps> = ({
+  className,
+  overlay,
+}: SpinnerProps) => (
   <div className={
     classNames({
       'hd-spinner': true,
-      [className]: className,
+      [`${className}`]: Boolean(className),
       'hd-spinner-overlay': overlay,
     })
   }
@@ -20,11 +27,6 @@ const Spinner = ({ className, overlay }) => (
 Spinner.defaultProps = {
   className: '',
   overlay: false,
-};
-
-Spinner.propTypes = {
-  className: PropTypes.string,
-  overlay: PropTypes.bool,
 };
 
 export default Spinner;

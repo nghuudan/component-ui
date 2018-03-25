@@ -1,17 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { StatelessComponent } from 'react';
 import { mount } from 'enzyme';
 import Each from './each';
 
 describe('Each', () => {
-  const Item = ({ id }) => <p>{id}</p>;
+  const Item: StatelessComponent<any> = ({ id }) => <p>{id}</p>;
 
   Item.defaultProps = {
     id: 0,
-  };
-
-  Item.propTypes = {
-    id: PropTypes.number,
   };
 
   const items = [
@@ -32,7 +27,7 @@ describe('Each', () => {
   });
 
   it('should only render components when the items are an Array', () => {
-    const wrapper = mount(<Each items="test" component={Item} />);
+    const wrapper = mount(<Each items={undefined} component={Item} />);
     expect(wrapper.find(Item)).toHaveLength(0);
   });
 });
