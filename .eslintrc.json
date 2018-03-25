@@ -5,6 +5,8 @@
   "extends": "airbnb",
   "plugins": ["jest"],
   "rules": {
-    "import/prefer-default-export": 0
+    "import/extensions": 1,
+    "import/no-unresolved": 1,
+    "import/prefer-default-export": 1
   }
 }
