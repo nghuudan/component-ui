@@ -1,6 +1,8 @@
 @import '../vars';
 
 .hd-spinner {
+  display: inline-block;
+
   &.hd-spinner-overlay {
     align-items: center;
     background-color: $hd-spinner-bg-color;
