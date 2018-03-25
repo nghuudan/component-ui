@@ -1,8 +1,29 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Button } from '../dist/button'; // import single component
-import { Flex, Grid, Spinner } from '../dist'; // import from all components
+import {
+  Each,
+  Flex,
+  Grid,
+  Spinner,
+  When,
+} from '../dist'; // import from all components
+
 import './app.scss';
+
+const buttons = [
+  { children: 'confirm', confirm: true },
+  { children: 'primary', primary: true },
+  { children: 'warning', warning: true },
+  { children: 'default' },
+  { children: 'disabled', disabled: true },
+];
+
+const pets = [
+  { children: 'Bird', xs: 4 },
+  { children: 'Cat', xs: 4 },
+  { children: 'Dog', xs: 4 },
+];
 
 const App = () => (
   <Grid className="app-container" container>
@@ -10,11 +31,7 @@ const App = () => (
       <h1 className="app-title">Component UI &mdash; Simple components for React</h1>
 
       <h2 className="app-heading">Button</h2>
-      <Button confirm>confirm</Button>
-      <Button primary>primary</Button>
-      <Button warning>warning</Button>
-      <Button>default</Button>
-      <Button disabled>disabled</Button>
+      <Each items={buttons} component={Button} />
 
       <h2 className="app-heading">Flex</h2>
       <Flex align="stretch-start" className="app-flex-example" wrap>
@@ -62,9 +79,28 @@ const App = () => (
       </Grid>
     </Grid>
 
-    <h2 className="app-heading">Spinner</h2>
-    <Grid xs={12}>
+    <Grid xs={12} md={4}>
+      <h2 className="app-heading">Spinner</h2>
       <Spinner className="app-spinner-example" />
+    </Grid>
+
+    <Grid xs={12} md={4}>
+      <Grid xs={12}>
+        <h2 className="app-heading">Each</h2>
+      </Grid>
+      <Grid container xs={12}>
+        <Each items={pets} component={Grid} />
+      </Grid>
+    </Grid>
+
+    <Grid xs={12} md={4}>
+      <h2 className="app-heading">When</h2>
+      <When is={new Date().getSeconds() % 2 === 0}>
+        <p>This text will show on even seconds.</p>
+      </When>
+      <When is={new Date().getSeconds() % 2 !== 0}>
+        <p>This text will show on odd seconds.</p>
+      </When>
     </Grid>
   </Grid>
 );
