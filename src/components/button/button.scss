@@ -17,7 +17,7 @@
   outline: 0;
   padding: 1em 2em;
   text-transform: uppercase;
-  transition: outline .2s;
+  transition: background-color .2s, box-shadow .2s;
 
   &:not(.hd-disabled) {
     &:hover {
@@ -26,6 +26,7 @@
 
     &:active {
       background-color: $hd-button-active-bg-color;
+      box-shadow: none;
     }
   }
 
