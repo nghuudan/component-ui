@@ -1,2 +1,7 @@
 files:
   include: 'src/**/*.scss'
+rules:
+  nesting-depth:
+    - 1
+    -
+      max-depth: 3

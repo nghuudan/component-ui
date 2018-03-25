@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Button } from '../dist/button'; // import single component
 import {
+  Checkbox,
   Each,
   Flex,
   Grid,
@@ -32,6 +33,9 @@ const App = () => (
 
       <h2 className="app-heading">Button</h2>
       <Each items={buttons} component={Button} />
+
+      <h2 className="app-heading">Checkbox</h2>
+      <Checkbox name="checkbox" />
 
       <h2 className="app-heading">Flex</h2>
       <Flex align="stretch-start" className="app-flex-example" wrap>
