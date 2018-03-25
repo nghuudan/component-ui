@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run clean && npm run lint && tsc && npm run sass",
+    "build": "npm run clean && npm run lint && npm run build:ts && npm run sass",
     "build:docs": "webpack --mode production",
+    "build:ts": "tsc -p tsconfig.dist.json",
     "clean": "rimraf coverage dist",
     "dist": "npm test && npm run build && npm run build:docs",
     "lint": "tslint -c tslint.json src/**/*.ts src/**/*.tsx",

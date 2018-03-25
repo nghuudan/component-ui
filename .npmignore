@@ -8,5 +8,5 @@ src/
 /index.html
 /jest.*
 /webpack.*
-tsconfig.json
+tsconfig.*
 tslint.json
