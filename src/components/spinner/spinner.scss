@@ -30,14 +30,28 @@
     width: 8em;
 
     .hd-spinner-disc-inner {
+      align-items: center;
       animation: hd-spinner-inner-rotate 1s infinite;
       animation-timing-function: linear;
       border: .25em solid transparent;
       border-bottom-color: $hd-spinner-inner-border-color;
-      border-radius: 6em;
+      border-radius: 7em;
       border-top-color: $hd-spinner-inner-border-color;
+      display: flex;
       height: 7em;
+      justify-content: center;
       width: 7em;
+
+      .hd-spinner-disc-core {
+        animation: hd-spinner-rotate .75s infinite;
+        animation-timing-function: linear;
+        border: .25em solid transparent;
+        border-radius: 6em;
+        border-right-color: $hd-spinner-border-color;
+        border-top-color: $hd-spinner-border-color;
+        height: 6em;
+        width: 6em;
+      }
     }
   }
 }
