@@ -2,11 +2,11 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Button } from '../dist/button'; // import single component
 import {
-  Checkbox,
   Each,
   Flex,
   Grid,
   Spinner,
+  Toggle,
   When,
 } from '../dist'; // import from all components
 
@@ -33,9 +33,6 @@ const App = () => (
 
       <h2 className="app-heading">Button</h2>
       <Each items={buttons} component={Button} />
-
-      <h2 className="app-heading">Checkbox</h2>
-      <Checkbox name="checkbox" />
 
       <h2 className="app-heading">Flex</h2>
       <Flex align="stretch-start" className="app-flex-example" wrap>
@@ -83,12 +80,17 @@ const App = () => (
       </Grid>
     </Grid>
 
-    <Grid xs={12} md={4}>
+    <Grid xs={12} md={6} lg={3}>
       <h2 className="app-heading">Spinner</h2>
       <Spinner className="app-spinner-example" />
     </Grid>
 
-    <Grid xs={12} md={4}>
+    <Grid xs={12} md={6} lg={3}>
+      <h2 className="app-heading">Toggle</h2>
+      <Toggle className="app-toggle-example" name="toggle" />
+    </Grid>
+
+    <Grid xs={12} md={6} lg={3}>
       <Grid xs={12}>
         <h2 className="app-heading">Each</h2>
       </Grid>
@@ -97,7 +99,7 @@ const App = () => (
       </Grid>
     </Grid>
 
-    <Grid xs={12} md={4}>
+    <Grid xs={12} md={6} lg={3}>
       <h2 className="app-heading">When</h2>
       <When is={new Date().getSeconds() % 2 === 0}>
         <p>This text will show on even seconds.</p>

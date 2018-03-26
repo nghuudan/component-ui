@@ -1,37 +1,37 @@
 import React, { StatelessComponent } from 'react';
 
-export interface CheckboxProps {
+export interface ToggleProps {
   change?(event: React.ChangeEvent<HTMLInputElement>): void;
   className?: string;
   name: string;
   value?: string;
 }
 
-const Checkbox: StatelessComponent<CheckboxProps> = ({
+const Toggle: StatelessComponent<ToggleProps> = ({
   change,
   className,
   name,
   value,
 }) => (
-  <label className={`hd-checkbox ${className}`}>
+  <label className={`hd-toggle ${className}`}>
     <input
-      className="hd-checkbox-input"
+      className="hd-toggle-input"
       name={name}
       onChange={change}
       type="checkbox"
       value={value}
     />
-    <span className="hd-checkbox-switch">
-      <span className="hd-checkbox-toggle" />
+    <span className="hd-toggle-switch">
+      <span className="hd-toggle-slider" />
     </span>
   </label>
 );
 
-Checkbox.defaultProps = {
+Toggle.defaultProps = {
   change: undefined,
   className: '',
   name: '',
-  value: 'yes',
+  value: '',
 };
 
-export default Checkbox;
+export default Toggle;

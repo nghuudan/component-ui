@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Checkbox from './checkbox';
+import Toggle from './toggle';
 
-describe('Checkbox', () => {
+describe('Toggle', () => {
   const wrapper = shallow(
-    <Checkbox
+    <Toggle
       className="test-class"
       name="testName"
       value="testValue"
@@ -29,5 +29,12 @@ describe('Checkbox', () => {
 
   it('should have the value from props', () => {
     expect(wrapper.find('input').prop('value')).toBe('testValue');
+  });
+
+  it('should handle onChange with change from props', () => {
+    const change = jest.fn();
+    wrapper.setProps({ change });
+    wrapper.find('input').simulate('change');
+    expect(change).toHaveBeenCalled();
   });
 });
