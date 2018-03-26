@@ -1,6 +1,6 @@
 {
   "name": "component-ui",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Simple components for React",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
