@@ -7,11 +7,12 @@ export interface EachProps {
 
 const Each: StatelessComponent<EachProps> = ({ component, items }) => {
   const EachComponent = component;
+  const now = Date.now();
   return (
     <>
       {
         Array.isArray(items) ? items.map((item, index) => (
-          <EachComponent key={new Date(index).getTime()} {...item} />
+          <EachComponent key={`${now}_${index}`} {...item} />
         )) : null
       }
     </>
