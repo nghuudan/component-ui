@@ -5,6 +5,7 @@ Simple components for React. Bring your own CSS reset.
 - [Flex](#flex)
 - [Grid](#grid)
 - [Spinner](#spinner)
+- [Toggle](#toggle)
 - [Utils](#utils)
   - [Each](#each)
   - [When](#when)
@@ -30,7 +31,7 @@ Simple components for React. Bring your own CSS reset.
 | Property    | Type       | Description
 | ----------- | ---------- | ----------------------------------------
 | `className` | `String`   | CSS class passed into the button element
-| `click`     | `Function` | Click event handler passed to the button
+| `click`     | `Function` | Handles the onClick event on the button
 | `confirm`   | `Boolean`  | Applies confirm styles to the button
 | `disabled`  | `Boolean`  | Disables the button
 | `primary`   | `Boolean`  | Applies primary styles to the button
@@ -161,6 +162,27 @@ import { Spinner } from 'component-ui';
 
 const SpinnerExample = () => (
   <Spinner className="spinner-example" overlay />
+);
+```
+
+### Toggle
+| Property    | Type       | Description
+| ----------- | ---------- | -----------------------------------------
+| `change`    | `Function` | Handles the onChange event on the input
+| `className` | `String`   | CSS class passed into the element
+| `name`      | `String`   | The name used for the input within a form
+| `value`     | `String`   | The value used for the input value
+```javascript
+import React from 'react';
+import { Toggle } from 'component-ui';
+
+const ToggleExample = (props) => (
+  <Toggle
+    className="toggle-example"
+    change={props.change}
+    name="enableTimeTravel"
+    value="sureWhyNot"
+  />
 );
 ```
 
