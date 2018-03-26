@@ -44,6 +44,16 @@
   .hd-toggle-input {
     display: none;
 
+    &:active {
+      + .hd-toggle-switch {
+        background-color: $hd-toggle-switch-active-bg-color;
+
+        .hd-toggle-slider {
+          background-color: $hd-toggle-slider-active-bg-color;
+        }
+      }
+    }
+
     &:checked {
       + .hd-toggle-switch {
         background-color: $hd-toggle-switch-checked-bg-color;

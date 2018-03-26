@@ -19,7 +19,9 @@ const Spinner: StatelessComponent<SpinnerProps> = ({
   }
   >
     <div className="hd-spinner-disc">
-      <div className="hd-spinner-disc-inner" />
+      <div className="hd-spinner-disc-inner">
+        <div className="hd-spinner-disc-core" />
+      </div>
     </div>
   </div>
 );
