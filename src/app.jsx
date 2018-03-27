@@ -105,13 +105,21 @@ class App extends Component {
 
         <Grid xs={12} md={6} lg={3}>
           <h2 className="app-heading">Toggle</h2>
-          <Toggle
-            change={this.handleToggle}
-            checked={this.state.toggle}
-            className="app-toggle-example"
-            name="toggle"
-          />
-          <p className="app-code">{`toggle: ${this.state.toggle}`}</p>
+          <Grid container>
+            <Grid xs={6}>
+              <Toggle
+                change={this.handleToggle}
+                checked={this.state.toggle}
+                className="app-toggle-example"
+                name="toggle"
+              />
+              <p className="app-code">{`toggle: ${this.state.toggle}`}</p>
+            </Grid>
+            <Grid xs={6}>
+              <Toggle className="app-toggle-example" disabled />
+              <p className="app-code">disabled</p>
+            </Grid>
+          </Grid>
         </Grid>
 
         <Grid xs={12} md={6} lg={3}>
