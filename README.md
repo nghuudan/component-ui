@@ -169,7 +169,9 @@ const SpinnerExample = () => (
 | Property    | Type       | Description
 | ----------- | ---------- | -----------------------------------------
 | `change`    | `Function` | Handles the onChange event on the input
+| `checked`   | `Boolean`  | Passed into the hidden checkbox input
 | `className` | `String`   | CSS class passed into the element
+| `disabled`  | `Boolean`  | Disables the toggle input
 | `name`      | `String`   | The name used for the input within a form
 | `value`     | `String`   | The value used for the input value
 ```javascript
@@ -178,8 +180,10 @@ import { Toggle } from 'component-ui';
 
 const ToggleExample = (props) => (
   <Toggle
-    className="toggle-example"
     change={props.change}
+    checked
+    className="toggle-example"
+    disabled
     name="enableTimeTravel"
     value="sureWhyNot"
   />
