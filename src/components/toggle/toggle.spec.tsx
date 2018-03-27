@@ -37,4 +37,19 @@ describe('Toggle', () => {
     wrapper.find('input').simulate('change');
     expect(change).toHaveBeenCalled();
   });
+
+  it('should pass to the input checked from props', () => {
+    wrapper.setProps({ checked: true });
+    expect(wrapper.find('input').prop('checked')).toBe(true);
+  });
+
+  it('should disable the toggle according to disabled from props', () => {
+    wrapper.setProps({ disabled: true });
+    expect(wrapper.find('input').prop('disabled')).toBe(true);
+  });
+
+  it('should have the className according to disabled from props', () => {
+    wrapper.setProps({ disabled: true });
+    expect(wrapper.find('.hd-disabled')).toHaveLength(1);
+  });
 });

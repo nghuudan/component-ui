@@ -12,6 +12,10 @@
   vertical-align: middle;
   width: 4em;
 
+  &.hd-disabled {
+    opacity: .5;
+  }
+
   .hd-toggle-switch {
     background-color: $hd-toggle-switch-bg-color;
     box-shadow: inset 0 .1em .3em .1em $hd-toggle-box-shadow-color;
@@ -44,12 +48,14 @@
   .hd-toggle-input {
     display: none;
 
-    &:active {
-      + .hd-toggle-switch {
-        background-color: $hd-toggle-switch-active-bg-color;
+    &:not(:disabled) {
+      &:active {
+        + .hd-toggle-switch {
+          background-color: $hd-toggle-switch-active-bg-color;
 
-        .hd-toggle-slider {
-          background-color: $hd-toggle-slider-active-bg-color;
+          .hd-toggle-slider {
+            background-color: $hd-toggle-slider-active-bg-color;
+          }
         }
       }
     }
@@ -61,6 +67,12 @@
         .hd-toggle-slider {
           left: 2em;
         }
+      }
+    }
+
+    &:disabled {
+      + .hd-toggle-switch {
+        background-color: $hd-toggle-switch-disabled-bg-color;
       }
     }
   }

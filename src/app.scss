@@ -5,6 +5,7 @@ $app-body-font-color: #333;
 $app-container-box-shadow-color: rgba(0, 0, 0, .3);
 $app-example-bg-color: rgba(0, 0, 0, .1);
 $app-example-border-color: #999;
+$app-font-monospace: Monaco, 'Courier New', monospace;
 $app-title-border-color: #ccc;
 
 html {
@@ -41,7 +42,7 @@ body {
   }
 
   .app-flex-example {
-    font-family: Monaco, 'Courier New', monospace;
+    font-family: $app-font-monospace;
     font-weight: 600;
 
     .hd-flex {
@@ -52,7 +53,7 @@ body {
   }
 
   .app-grid-example {
-    font-family: Monaco, 'Courier New', monospace;
+    font-family: $app-font-monospace;
     font-weight: 600;
 
     .hd-grid {
@@ -68,5 +69,9 @@ body {
 
   .app-toggle-example {
     font-size: 1.5em;
+  }
+
+  .app-code {
+    font-family: $app-font-monospace;
   }
 }
