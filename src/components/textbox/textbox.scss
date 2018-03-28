@@ -5,10 +5,11 @@
   display: inline-flex;
   flex-direction: row;
   font-size: 1em;
+  font-weight: 600;
   justify-content: flex-start;
 
   &.hd-disabled {
-    opacity: .5;
+    opacity: .3;
   }
 
   .hd-textbox-label-text {
@@ -25,6 +26,7 @@
     flex: 1 1 12em;
     font-family: inherit;
     font-size: 1em;
+    font-weight: 600;
     height: 3em;
     margin: 0;
     padding: .2em .6em;

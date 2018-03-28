@@ -131,6 +131,7 @@ class App extends Component {
               name="phone"
               placeholder="555-555-HOME"
               type={TextboxType.PHONE}
+              value="123-456-7890"
             />
           </p>
         </Grid>
