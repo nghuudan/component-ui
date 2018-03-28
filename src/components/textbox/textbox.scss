@@ -1,0 +1,37 @@
+@import '../vars';
+
+.hd-textbox {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 1em;
+  justify-content: flex-start;
+
+  &.hd-disabled {
+    opacity: .5;
+  }
+
+  .hd-textbox-label-text {
+    margin-right: .5em;
+  }
+
+  .hd-textbox-input {
+    background-color: $hd-textbox-bg-color;
+    border: 0;
+    border-radius: .1em;
+    box-shadow: inset 0 .1em .3em .1em $hd-textbox-box-shadow-color;
+    box-sizing: border-box;
+    color: $hd-textbox-font-color;
+    flex: 1 1 12em;
+    font-family: inherit;
+    font-size: 1em;
+    height: 3em;
+    margin: 0;
+    padding: .2em .6em;
+
+    &:disabled {
+      background-color: $hd-textbox-disabled-bg-color;
+      color: $hd-textbox-disabled-font-color;
+    }
+  }
+}
