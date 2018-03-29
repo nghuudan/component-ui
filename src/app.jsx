@@ -107,33 +107,29 @@ class App extends Component {
           </Grid>
         </Grid>
 
-        <Grid xs={12} md={6} lg={6}>
+        <Grid xs={12} md={6} lg={4}>
           <h2 className="app-heading">Spinner</h2>
           <Spinner className="app-spinner-example" />
         </Grid>
 
-        <Grid xs={12} md={6} lg={6}>
+        <Grid xs={12} md={6} lg={4}>
           <h2 className="app-heading">Textbox</h2>
-          <p>
-            <Textbox
-              change={this.handleChange}
-              labelText="Email"
-              name="email"
-              placeholder="email@example.com"
-              type={TextboxType.EMAIL}
-              value={this.state.email}
-            />
-          </p>
-          <p>
-            <Textbox
-              disabled
-              labelText="Phone"
-              name="phone"
-              placeholder="555-555-HOME"
-              type={TextboxType.PHONE}
-              value="123-456-7890"
-            />
-          </p>
+          <Textbox
+            change={this.handleChange}
+            labelText="Email"
+            name="email"
+            placeholder="email@example.com"
+            type={TextboxType.EMAIL}
+            value={this.state.email}
+          />
+          <Textbox
+            disabled
+            labelText="Phone"
+            name="phone"
+            placeholder="555-555-HOME"
+            type={TextboxType.PHONE}
+            value="123-456-7890"
+          />
         </Grid>
 
         <Grid xs={12} md={6} lg={4}>
@@ -155,7 +151,7 @@ class App extends Component {
           </Grid>
         </Grid>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid xs={12} lg={6}>
           <Grid xs={12}>
             <h2 className="app-heading">Each</h2>
           </Grid>
@@ -164,7 +160,7 @@ class App extends Component {
           </Grid>
         </Grid>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid xs={12} lg={6}>
           <h2 className="app-heading">When</h2>
           <When is={new Date().getSeconds() % 2 === 0}>
             <p>This text will show on even seconds.</p>
