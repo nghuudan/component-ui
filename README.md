@@ -5,6 +5,7 @@ Simple components for React. Bring your own CSS reset.
 - [Flex](#flex)
 - [Grid](#grid)
 - [Spinner](#spinner)
+- [Textbox](#textbox)
 - [Toggle](#toggle)
 - [Utils](#utils)
   - [Each](#each)
@@ -165,6 +166,37 @@ const SpinnerExample = () => (
 );
 ```
 
+### Textbox
+| Property      | Type       | Description
+| ------------- | ---------- | ---------------------------------------
+| `change`      | `Function` | Handles the onChange event on the input
+| `className`   | `String`   | CSS class passed into the element
+| `defaultText` | `String`   | The default text for uncontrolled input
+| `disabled`    | `Boolean`  | Disables the text input
+| `focus`       | `Function` | Handles the onFocus event on the input
+| `labelText`   | `String`   | Optional label text for the input
+| `name`        | `String`   | The name used for the input element
+| `placeholder` | `String`   | Optional text shown when input is empty
+| `type`        | `String`   | The type of the text input
+| `value`       | `String`   | The value used for the input value
+```javascript
+import React from 'react';
+import { Textbox } from 'component-ui';
+
+const TextboxExample = (props) => (
+  <Textbox
+    change={props.change}
+    className="textbox-example"
+    focus={props.focus}
+    labelText="Book Title"
+    name="bookTitle"
+    placeholder="Title of the Book"
+    type="text"
+    value={props.bookTitle}
+  />
+);
+```
+
 ### Toggle
 | Property    | Type       | Description
 | ----------- | ---------- | -----------------------------------------
@@ -172,7 +204,7 @@ const SpinnerExample = () => (
 | `checked`   | `Boolean`  | Passed into the hidden checkbox input
 | `className` | `String`   | CSS class passed into the element
 | `disabled`  | `Boolean`  | Disables the toggle input
-| `name`      | `String`   | The name used for the input within a form
+| `name`      | `String`   | The name used for the input element
 | `value`     | `String`   | The value used for the input value
 ```javascript
 import React from 'react';

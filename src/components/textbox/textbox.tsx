@@ -13,6 +13,7 @@ export enum TextboxType {
 export interface TextboxProps {
   change?(event: React.ChangeEvent<HTMLInputElement>): void;
   className?: string;
+  defaultText?: string;
   disabled?: boolean;
   focus?(event: React.FocusEvent<HTMLInputElement>): void;
   labelText?: string;
@@ -25,6 +26,7 @@ export interface TextboxProps {
 const Textbox: StatelessComponent<TextboxProps> = ({
   change,
   className,
+  defaultText,
   disabled,
   focus,
   labelText,
@@ -48,6 +50,7 @@ const Textbox: StatelessComponent<TextboxProps> = ({
     }
     <input
       className="hd-textbox-input"
+      defaultValue={defaultText}
       disabled={disabled}
       name={name}
       onChange={change}
@@ -62,6 +65,7 @@ const Textbox: StatelessComponent<TextboxProps> = ({
 Textbox.defaultProps = {
   change: undefined,
   className: '',
+  defaultText: undefined,
   disabled: false,
   focus: undefined,
   labelText: '',

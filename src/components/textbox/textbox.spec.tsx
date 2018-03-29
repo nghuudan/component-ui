@@ -46,6 +46,11 @@ describe('Textbox', () => {
     expect(wrapper.find('input').prop('disabled')).toBe(true);
   });
 
+  it('should pass the defaultText to the defaultValue', () => {
+    wrapper.setProps({ defaultText: 'test' });
+    expect(wrapper.find('input').prop('defaultValue')).toBe('test');
+  });
+
   it('should have the disabled className when disabled', () => {
     expect(wrapper.find('.hd-disabled')).toHaveLength(1);
   });
