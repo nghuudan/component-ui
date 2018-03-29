@@ -112,7 +112,7 @@ class App extends Component {
           <Spinner className="app-spinner-example" />
         </Grid>
 
-        <Grid xs={12} md={6} lg={4}>
+        <Grid className="app-textbox-example" xs={12} md={6} lg={4}>
           <h2 className="app-heading">Textbox</h2>
           <Textbox
             change={this.handleChange}

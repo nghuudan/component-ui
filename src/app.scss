@@ -41,6 +41,10 @@ body {
     margin-top: 2em;
   }
 
+  .app-code {
+    font-family: $app-font-monospace;
+  }
+
   .app-flex-example {
     font-family: $app-font-monospace;
     font-weight: 600;
@@ -67,11 +71,17 @@ body {
     font-size: .75em;
   }
 
-  .app-toggle-example {
-    font-size: 1em;
+  .app-textbox-example {
+    .hd-textbox {
+      width: 20em;
+    }
+
+    .hd-textbox-label-text {
+      width: 4em;
+    }
   }
 
-  .app-code {
-    font-family: $app-font-monospace;
+  .app-toggle-example {
+    font-size: 1em;
   }
 }
