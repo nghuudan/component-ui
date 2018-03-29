@@ -7,6 +7,8 @@ import {
   Flex,
   Grid,
   Spinner,
+  Textbox,
+  TextboxType,
   Toggle,
   When,
 } from '../dist'; // import from all components
@@ -32,10 +34,17 @@ class App extends Component {
     super(props);
 
     this.state = {
+      email: 'hello@example.com',
       toggle: false,
     };
 
+    this.handleChange = this.handleChange.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
+  }
+
+  handleChange(event) {
+    const { value } = event.target;
+    this.setState({ email: value });
   }
 
   handleToggle(event) {
@@ -98,12 +107,36 @@ class App extends Component {
           </Grid>
         </Grid>
 
-        <Grid xs={12} md={6} lg={3}>
+        <Grid xs={12} md={6} lg={6}>
           <h2 className="app-heading">Spinner</h2>
           <Spinner className="app-spinner-example" />
         </Grid>
 
-        <Grid xs={12} md={6} lg={3}>
+        <Grid xs={12} md={6} lg={6}>
+          <h2 className="app-heading">Textbox</h2>
+          <p>
+            <Textbox
+              change={this.handleChange}
+              labelText="Email"
+              name="email"
+              placeholder="email@example.com"
+              type={TextboxType.EMAIL}
+              value={this.state.email}
+            />
+          </p>
+          <p>
+            <Textbox
+              disabled
+              labelText="Phone"
+              name="phone"
+              placeholder="555-555-HOME"
+              type={TextboxType.PHONE}
+              value="123-456-7890"
+            />
+          </p>
+        </Grid>
+
+        <Grid xs={12} md={6} lg={4}>
           <h2 className="app-heading">Toggle</h2>
           <Grid container>
             <Grid xs={6}>
@@ -122,7 +155,7 @@ class App extends Component {
           </Grid>
         </Grid>
 
-        <Grid xs={12} md={6} lg={3}>
+        <Grid xs={12} md={6} lg={4}>
           <Grid xs={12}>
             <h2 className="app-heading">Each</h2>
           </Grid>
@@ -131,7 +164,7 @@ class App extends Component {
           </Grid>
         </Grid>
 
-        <Grid xs={12} md={6} lg={3}>
+        <Grid xs={12} md={6} lg={4}>
           <h2 className="app-heading">When</h2>
           <When is={new Date().getSeconds() % 2 === 0}>
             <p>This text will show on even seconds.</p>
